@@ -107,50 +107,45 @@ def test_e2e_whatif_release_month_returns_12_points():
 
 
 def test_e2e_olap_presets_render():
-    """Verify all 5 canonical OLAP presets execute and return multi-dimensional data."""
-    # 1. Drilldown: genre x season
-    res_drill = client.post("/api/olap/query", json={
-        "dimensions": ["primary_genre", "season"],
-        "measures": ["count", "hit_rate", "median_roi"],
-    })
-    assert res_drill.status_code == 200
-    d_drill = res_drill.json()
-    assert d_drill["total_records"] > 0
-    assert "primary_genre" in d_drill["dimensions"]
-    assert "season" in d_drill["dimensions"]
+    """
+    Verify that /api/olap/presets returns exactly the 5 canonical OLAP presets:
+    rollup, drilldown, slice, dice, and pivot, each with non-empty data.
+    """
+    res = client.get("/api/olap/presets")
+    assert res.status_code == 200
+    data = res.json()
+    assert "presets" in data
+    presets = data["presets"]
 
-    # 2. Slice: Horror films across budget tiers
-    res_slice = client.post("/api/olap/query", json={
-        "dimensions": ["budget_tier"],
-        "measures": ["count", "hit_rate", "median_roi"],
-        "filters": {"primary_genre": "Horror"},
-    })
-    assert res_slice.status_code == 200
-    d_slice = res_slice.json()
-    assert len(d_slice["records"]) > 0
+    expected_keys = {"rollup", "drilldown", "slice", "dice", "pivot"}
+    assert set(presets.keys()) == expected_keys
 
-    # 3. Dice: Summer/Holiday x Big Studio x Action/Adventure
-    res_dice = client.post("/api/olap/query", json={
-        "dimensions": ["primary_genre", "season"],
-        "measures": ["count", "hit_rate", "median_roi"],
-        "filters": {
-            "season": ["Summer", "Holiday"],
-            "big_studio": 1,
-            "primary_genre": ["Action", "Adventure"],
-        },
-    })
-    assert res_dice.status_code == 200
-    d_dice = res_dice.json()
-    assert d_dice["total_records"] >= 0
+    # Check each preset has non-empty payload and non-empty data tables
+    for key in expected_keys:
+        preset_obj = presets[key]
+        assert isinstance(preset_obj, dict), f"Preset {key} is not a dictionary"
+        assert "operation" in preset_obj
+        assert "description" in preset_obj
 
-    # 4. Rollup: Overall by season
-    res_rollup = client.post("/api/olap/query", json={
-        "dimensions": ["season"],
-        "measures": ["count", "hit_rate", "median_roi"],
-    })
-    assert res_rollup.status_code == 200
-    d_rollup = res_rollup.json()
-    assert len(d_rollup["records"]) == 4  # Summer, Holiday, Dump, Regular
+    # 1. Rollup: Verify coarse level decade and fine level year data tables
+    assert len(presets["rollup"]["coarse_level_decade"]["data"]) > 0
+    assert len(presets["rollup"]["fine_level_year"]["data"]) > 0
+
+    # 2. Drilldown: Verify 2000s years and season to month data tables
+    assert len(presets["drilldown"]["years_2000s"]["data"]) > 0
+    assert len(presets["drilldown"]["season_to_month"]["data"]) > 0
+
+    # 3. Slice: Verify slice action matrix table
+    assert len(presets["slice"]["slice_action"]["matrix"]) > 0
+
+    # 4. Dice: Verify dice result matrix table
+    assert len(presets["dice"]["dice_result"]["matrix"]) > 0
+
+    # 5. Pivot: Verify normal genre by budget and rotated budget by genre matrix tables
+    assert len(presets["pivot"]["normal_genre_by_budget"]["matrix"]) > 0
+    assert len(presets["pivot"]["rotated_budget_by_genre"]["matrix"]) > 0
+
+
 
 
 def test_e2e_rules_filters_work():
