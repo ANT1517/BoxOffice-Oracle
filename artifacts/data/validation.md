@@ -1,6 +1,6 @@
 # BoxOffice Oracle - Phase 2 Dataset Validation
 
-**Generated on:** 2026-10-23 08:32:24  
+**Generated on:** 2026-10-23 10:37:35  
 **Source Dataset:** TMDB 5000 Movie Dataset + The Movies Dataset (enrichment)  
 **Output Files:** `artifacts/data/movies_clean.csv`, `artifacts/data/movies_clean.parquet`
 

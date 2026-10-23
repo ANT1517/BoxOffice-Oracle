@@ -26,7 +26,7 @@ CLUSTER_FEATURES = [
 
 CLUSTER_NAMES_K3 = {
     0: "High-Budget, High-Engagement Blockbusters",
-    1: "Mid-to-High Budget Mainstream / Risky Studio Releases",
+    1: "Mid-Budget, Low-Engagement Mainstream Releases",
     2: "Low-Budget Indie / Sleeper Releases",
 }
 
@@ -251,7 +251,7 @@ The number of clusters $k$ was swept from $k = 2$ through $k = 8$:
 - **Commercial Outcome:** **{c0['hit_share']*100:.1f}% Hit Share** with a strong **{c0['median_roi']}x median ROI**.
 - **Studio Reading:** The primary revenue generator for major studios. While expensive to manufacture, tentpoles with established IP and star director/actor pairings present high commercial certainty.
 
-### Segment 1: Mid-to-High Budget Mainstream / Risky Studio Releases
+### Segment 1: Mid-Budget, Low-Engagement Mainstream Releases
 - **Size & Share:** {c1['size']:,} films ({c1['size_percentage']}% of the market — the majority segment).
 - **Profile:** Solid studio funding (average budget **${c1['centroid_original']['avg_budget']:,.0f}**) and seasoned cast members (${c1['centroid_original']['cast_avg_past_revenue']/1e6:.1f}M), but moderate-to-poor reception (**{c1['centroid_original']['vote_average']:.2f}** rating) and modest engagement (**{c1['centroid_original']['vote_count']:,.0f} votes**).
 - **Commercial Outcome:** **{c1['hit_share']*100:.1f}% Hit Share** and a sub-break-even median ROI of **{c1['median_roi']}x**.

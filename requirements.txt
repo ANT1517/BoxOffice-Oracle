@@ -3,9 +3,9 @@ numpy
 scikit-learn
 mlxtend
 scipy
-joblotlib
-fastapiib
-matpl
+joblib
+matplotlib
+fastapi
 uvicorn[standard]
 pydantic
 pytest
@@ -14,4 +14,3 @@ rapidfuzz
 openpyxl
 python-dotenv
 pyarrow
-d

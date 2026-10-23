@@ -238,7 +238,58 @@ The REST API is finalised in Phase 5; until then, treat Section 11 of `docs/BoxO
   - Registered 10 endpoints across modular routers: `/api/health`, `/api/meta`, `/api/people/search`, `/api/predict`, `/api/whatif`, `/api/movies/search`, `/api/insights/eda`, `/api/olap/query`, `/api/olap/presets`, `/api/rules`, `/api/clusters`, `/api/models`.
   - Added CORS middleware restricted strictly to Vite development server origin read from `.env` (`http://localhost:5173`, `http://127.0.0.1:5173`).
   - Implemented comprehensive pytest suite `backend/tests/test_api.py` (17/17 tests passing across the repository).
-  - Verified PowerShell launcher `scripts/run_backend.ps1` and Swagger documentation at `/docs`.
+### Phase 6: Frontend Application & Visualization
+- **Status:** Complete.
+- **Actions Completed:**
+  - Developed full-stack React 18 + TypeScript + Vite frontend styled with high-performance Vanilla CSS glassmorphism, responsive dark-mode aesthetics, and Google Outfit typography.
+  - Built interactive pages:
+    - **Predict & Counterfactual Simulator**: Pre-release (Model A) vs. post-release (Model B) toggle, real-time what-if curve generation, out-of-fold historical match detection, local feature contribution breakdown.
+    - **OLAP Data Cube Explorer**: Multi-dimensional drill-downs across Budget, Primary Genre, and Season; slice/dice filtering; and pre-aggregated presets with small-sample ($N < 30$) visual indicators.
+    - **Association Rules & K-Means Clusters**: Dual Apriori / FP-Growth benchmark viewer, interactive rule table with metric filtering, 3D/2D cluster projection scatter plots, and cluster profiling cards.
+    - **Exploratory Insights**: Dynamic attribute summaries, interactive histograms, hit-rate factor comparisons, and budget vs. revenue log-log scatter plots.
+    - **Model Comparison & Evaluation**: 10-fold CV metric tables across all 6 classifiers, ROC curves, confusion matrices, and Nadeau-Bengio corrected resampled t-test significance matrices.
+    - **Methodology & Governance**: Zero-leakage protocol specification, honest out-of-fold evaluation principles, and feature dictionary.
+- **Phase 6 Fixes Applied:**
+  1. **Class Distribution Alignment**: Verified and confirmed ground-truth clean dataset class counts of **1,801 Hits / 1,403 Flops (56.21%)**. Replaced all legacy hardcoded references across `InsightsPage.tsx`, `MethodPage.tsx`, `ModelsPage.tsx`, and `README.md`. Bound UI dynamically to `eda?.class_distribution`.
+  2. **Dual Association Rules Benchmark**: Displayed both benchmark runs: `min_support = 0.03` (Apriori faster: 199.5 ms vs. 362.8 ms) and `min_support = 0.01` (FP-Growth faster: 1,050.4 ms vs. 1,444.4 ms). Updated algorithmic explanation with required text: *"FP-Growth avoids candidate generation and usually wins on larger or denser data / lower support; on this small dataset at high support, Apriori's vectorised implementation was faster."*
+  3. **Cluster 1 Naming**: Renamed Cluster 1 to `"Mid-Budget, Low-Engagement Mainstream Releases"` consistently across `artifacts/clusters/kmeans.json`, `ml/cluster.py`, `report/cluster_interpretation.md`, and all UI components.
+
+---
+
+### Phase 7: Integration, Testing, SLA Validation & Final Delivery
+- **Status:** Complete.
+- **Actions Completed:**
+  - **Script Automation**:
+    - Created `scripts/start_all.ps1` to concurrently run the FastAPI backend on port 8000 and Vite frontend on port 5173.
+    - Tested `scripts/setup.ps1` from a clean state (venv creation, pip dependencies, npm packages, dataset pipeline build, unsupervised rule/cluster mining, and supervised ML model training). Total clean setup execution time: **536 seconds (~8.9 minutes)**.
+  - **End-to-End Verification**:
+    - Implemented automated API-level integration test suite `backend/tests/test_e2e_api.py` validating 5 core end-to-end workflows:
+      1. Single movie prediction endpoint parity against model inference logic.
+      2. 12-point release month what-if counterfactual simulation.
+      3. OLAP preset loading and structure validation.
+      4. Association rules filtering by minimum support, confidence, and lift.
+      5. Models endpoint synchronization with `artifacts/models/metrics.json`.
+    - Executed test suite across the entire repository: **22 passed in 12.41s**.
+    - Authored comprehensive manual verification procedure in `docs/e2e_manual_test_procedure.md`.
+  - **Demo Cases**:
+    - Authored `report/demo_cases.md` detailing 3 representative films with out-of-fold Model A/B probabilities vs. actual outcomes:
+      1. *Avengers: Age of Ultron* (2015) — Big-budget sequel Hit (Model A: 0.8021, Model B: 0.8892, Actual: Hit).
+      2. *Saw* (2004) — Low-budget horror Hit (**Model A Honest Miss**: 0.4208 [Miss!], Model B: 0.8856, Actual: Hit).
+      3. *Battlefield Earth* (2000) — Mid-budget original Flop (**Model A Honest Miss**: 0.6102 [Miss!], Model B: 0.1664, Actual: Flop).
+  - **Inference Latency SLA Validation**:
+    - Optimized single-prediction latency by configuring single-thread tree evaluation (`n_jobs=1`), caching feature baseline medians/modes in memory, and batching permutation deltas inside `explain()`.
+    - Executed `scripts/benchmark_predict.py` measuring wall-clock latency over 50 calls to `/api/predict`:
+      - **Minimum**: 95.68 ms
+      - **Mean**: 117.73 ms
+      - **p50 (Median)**: **116.35 ms**
+      - **p90**: 144.51 ms
+      - **p95**: **148.92 ms**
+      - **Maximum**: 159.62 ms
+      - **SLA Target (< 300 ms)**: **PASSED [OK]** (p95 is 148.92 ms, well below 300 ms).
+  - **Documentation & Packaging**:
+    - Completely rewrote `README.md` with system overview, 2.0x ROI metric definition, Mermaid architecture diagram, zero-leakage protocol, full ML benchmark comparison, installation guide, retraining instructions, REST API reference, repository layout, limitations, and TMDb attribution.
+    - Verified all artifacts, tests, scripts, and documentation for final delivery.
+
 
 
 

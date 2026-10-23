@@ -1098,20 +1098,44 @@ def generate_comparison_markdown(
 # Online Explanation Function (Per-Prediction Permutation Deltas)
 # ----------------------------------------------------------------------
 
+_FEATURE_REFERENCES_CACHE: Dict[str, Dict[str, Any]] = {}
+
+
+def get_feature_references(clean_data_path: str = "artifacts/data/movies_clean.parquet") -> Dict[str, Any]:
+    """Caches dataset medians/modes for sub-millisecond local feature explanations."""
+    if clean_data_path in _FEATURE_REFERENCES_CACHE:
+        return _FEATURE_REFERENCES_CACHE[clean_data_path]
+    df_clean = pd.read_parquet(clean_data_path)
+    refs = {}
+    all_feats = set(MODEL_A_PREDICTORS) | set(MODEL_B_PREDICTORS)
+    for feat in all_feats:
+        if feat in BINARY_PREDICTORS:
+            refs[feat] = int(df_clean[feat].mode()[0])
+        elif feat in CATEGORICAL_PREDICTORS:
+            refs[feat] = str(df_clean[feat].mode()[0])
+        elif feat in ("vote_count", "cast_past_films", "dir_past_films", "release_month", "n_genres"):
+            refs[feat] = int(round(float(df_clean[feat].median())))
+        else:
+            refs[feat] = float(df_clean[feat].median())
+    _FEATURE_REFERENCES_CACHE[clean_data_path] = refs
+    return refs
+
+
 def explain(
     movie_dict: Dict[str, Any],
     model_path: str = "artifacts/models/model_A.joblib",
     clean_data_path: str = "artifacts/data/movies_clean.parquet",
     model_type: Optional[str] = None,
     top_k: int = 5,
+    model_obj: Optional[Any] = None,
 ) -> Dict[str, Any]:
     """
     Computes local feature explanations for a single movie prediction using
     per-prediction permutation deltas against dataset reference baselines.
     Zero external dependencies (no SHAP required), deterministic, and millisecond fast.
     """
-    model = joblib.load(model_path)
-    df_clean = pd.read_parquet(clean_data_path)
+    model = model_obj if model_obj is not None else joblib.load(model_path)
+    refs = get_feature_references(clean_data_path)
 
     # Convert single movie dict into DataFrame
     row_df = pd.DataFrame([movie_dict])
@@ -1123,45 +1147,35 @@ def explain(
     # Baseline probability
     p0 = float(model.predict_proba(row_df[features])[:, 1][0])
 
-    cont_cols = get_continuous_predictors(model_type)
-    cat_cols = CATEGORICAL_PREDICTORS
-    bin_cols = BINARY_PREDICTORS
-
-    contributions = []
+    # Build batched perturbed rows for fast single-call inference
+    pert_feats = []
+    pert_rows = []
+    base_dict = dict(row_df.iloc[0])
 
     for feat in features:
-        curr_val = row_df.iloc[0][feat]
-        # Reference baseline: median for continuous, mode for categorical/binary
-        if feat in bin_cols:
-            ref_val = int(df_clean[feat].mode()[0])
-        elif feat in cat_cols:
-            ref_val = str(df_clean[feat].mode()[0])
-        elif feat in ("vote_count", "cast_past_films", "dir_past_films", "release_month", "n_genres"):
-            ref_val = int(round(float(df_clean[feat].median())))
-        else:
-            ref_val = float(df_clean[feat].median())
-
-        # If already at reference, contribution is 0
+        curr_val = base_dict.get(feat)
+        ref_val = refs.get(feat)
         if curr_val == ref_val:
             continue
+        pert_copy = dict(base_dict)
+        pert_copy[feat] = ref_val
+        pert_rows.append(pert_copy)
+        pert_feats.append((feat, curr_val, ref_val))
 
-        # Perturbed copy using dict to prevent strict Pandas dtype lock
-        pert_dict = dict(row_df.iloc[0])
-        pert_dict[feat] = ref_val
-        perturbed_df = pd.DataFrame([pert_dict])
-        p_perturbed = float(model.predict_proba(perturbed_df[features])[:, 1][0])
-
-        # Delta: how much curr_val added to the probability compared to reference
-        delta = p0 - p_perturbed
-
-        contributions.append({
-            "feature": feat,
-            "current_value": curr_val if not isinstance(curr_val, (np.floating, float)) else round(float(curr_val), 2),
-            "reference_value": ref_val if not isinstance(ref_val, (np.floating, float)) else round(float(ref_val), 2),
-            "delta_probability": round(float(delta), 4),
-            "abs_delta": abs(delta),
-            "impact": "positive" if delta > 0 else "negative",
-        })
+    contributions = []
+    if pert_rows:
+        perturbed_df = pd.DataFrame(pert_rows)
+        perturbed_probs = model.predict_proba(perturbed_df[features])[:, 1]
+        for (feat, curr_val, ref_val), p_pert in zip(pert_feats, perturbed_probs):
+            delta = p0 - float(p_pert)
+            contributions.append({
+                "feature": feat,
+                "current_value": curr_val if not isinstance(curr_val, (np.floating, float)) else round(float(curr_val), 2),
+                "reference_value": ref_val if not isinstance(ref_val, (np.floating, float)) else round(float(ref_val), 2),
+                "delta_probability": round(float(delta), 4),
+                "abs_delta": abs(delta),
+                "impact": "positive" if delta > 0 else "negative",
+            })
 
     # Sort by absolute impact
     contributions.sort(key=lambda x: x["abs_delta"], reverse=True)
@@ -1172,6 +1186,7 @@ def explain(
         "top_contributions": contributions[:top_k],
         "all_contributions": contributions,
     }
+
 
 
 if __name__ == "__main__":

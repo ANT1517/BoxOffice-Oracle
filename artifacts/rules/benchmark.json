@@ -8,22 +8,22 @@
     "num_runs": 3,
     "algorithms": {
       "apriori": {
-        "avg_time_seconds": 0.1995,
+        "avg_time_seconds": 0.2355,
         "times_seconds": [
-          0.1741,
-          0.1515,
-          0.273
+          0.2092,
+          0.2552,
+          0.2421
         ],
         "frequent_itemsets": 5186,
         "total_rules": 4572,
         "class_association_rules": 574
       },
       "fpgrowth": {
-        "avg_time_seconds": 0.3628,
+        "avg_time_seconds": 0.4523,
         "times_seconds": [
-          0.3292,
-          0.338,
-          0.4211
+          0.4281,
+          0.4045,
+          0.5243
         ],
         "frequent_itemsets": 5186,
         "total_rules": 4572,
@@ -41,22 +41,22 @@
     "num_runs": 3,
     "algorithms": {
       "apriori": {
-        "avg_time_seconds": 1.4444,
+        "avg_time_seconds": 1.6938,
         "times_seconds": [
-          1.4314,
-          1.5822,
-          1.3198
+          1.6521,
+          1.9666,
+          1.4628
         ],
         "frequent_itemsets": 27883,
         "total_rules": 33748,
         "class_association_rules": 4610
       },
       "fpgrowth": {
-        "avg_time_seconds": 1.0504,
+        "avg_time_seconds": 1.1961,
         "times_seconds": [
-          0.984,
-          1.1069,
-          1.0603
+          1.104,
+          1.1896,
+          1.2946
         ],
         "frequent_itemsets": 27883,
         "total_rules": 33748,
@@ -73,22 +73,22 @@
   "num_runs": 3,
   "algorithms": {
     "apriori": {
-      "avg_time_seconds": 0.1995,
+      "avg_time_seconds": 0.2355,
       "times_seconds": [
-        0.1741,
-        0.1515,
-        0.273
+        0.2092,
+        0.2552,
+        0.2421
       ],
       "frequent_itemsets": 5186,
       "total_rules": 4572,
       "class_association_rules": 574
     },
     "fpgrowth": {
-      "avg_time_seconds": 0.3628,
+      "avg_time_seconds": 0.4523,
       "times_seconds": [
-        0.3292,
-        0.338,
-        0.4211
+        0.4281,
+        0.4045,
+        0.5243
       ],
       "frequent_itemsets": 5186,
       "total_rules": 4572,

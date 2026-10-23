@@ -64,7 +64,7 @@ export const MethodPage: React.FC = () => {
               ROI = Worldwide Box-Office Revenue / Production Budget &ge; 2.0
             </div>
             <p className="text-[11px] text-zinc-400">
-              Films achieving &ge; 2.0x ROI are labeled <strong>Hit</strong> (N = 1,799 / 56.15%). Films with ROI &lt; 2.0x are labeled <strong>Flop</strong> (N = 1,405 / 43.85%).
+              Films achieving &ge; 2.0x ROI are labeled <strong>Hit</strong> (N = 1,801 / 56.21%). Films with ROI &lt; 2.0x are labeled <strong>Flop</strong> (N = 1,403 / 43.79%).
             </p>
           </div>
 

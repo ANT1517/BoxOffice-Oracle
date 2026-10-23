@@ -234,14 +234,20 @@ export const InsightsPage: React.FC = () => {
             <div className="p-4 rounded-xl border border-emerald-500/30 bg-emerald-950/20">
               <span className="text-[10px] font-mono uppercase text-emerald-400">Commercial Hits</span>
               <div className="text-2xl font-bold font-display text-emerald-300 mt-1">
-                1,799 <span className="text-xs font-mono font-normal">(56.15%)</span>
+                {eda?.class_distribution?.binary?.Hit?.count?.toLocaleString() ?? '1,801'}{' '}
+                <span className="text-xs font-mono font-normal">
+                  ({(eda?.class_distribution?.binary?.Hit?.percentage ?? 56.21).toFixed(2)}%)
+                </span>
               </div>
               <p className="text-[11px] text-emerald-400/80 mt-1">ROI &ge; 2.0x (Baseline ZeroR)</p>
             </div>
             <div className="p-4 rounded-xl border border-rose-500/30 bg-rose-950/20">
               <span className="text-[10px] font-mono uppercase text-rose-400">Commercial Flops</span>
               <div className="text-2xl font-bold font-display text-rose-300 mt-1">
-                1,405 <span className="text-xs font-mono font-normal">(43.85%)</span>
+                {eda?.class_distribution?.binary?.Flop?.count?.toLocaleString() ?? '1,403'}{' '}
+                <span className="text-xs font-mono font-normal">
+                  ({(eda?.class_distribution?.binary?.Flop?.percentage ?? 43.79).toFixed(2)}%)
+                </span>
               </div>
               <p className="text-[11px] text-rose-400/80 mt-1">ROI &lt; 2.0x theatrical deficit</p>
             </div>
@@ -305,7 +311,7 @@ export const InsightsPage: React.FC = () => {
                         return null;
                       }}
                     />
-                    <ReferenceLine y={56.15} stroke="#f59e0b" strokeDasharray="3 3" label={{ value: '56.2% Avg', fill: '#f59e0b', fontSize: 10 }} />
+                    <ReferenceLine y={56.21} stroke="#f59e0b" strokeDasharray="3 3" label={{ value: '56.2% Avg', fill: '#f59e0b', fontSize: 10 }} />
                     <Bar dataKey="hit_rate" radius={[4, 4, 0, 0]}>
                       {genreChartData.map((entry, index) => (
                         <Cell
@@ -349,7 +355,7 @@ export const InsightsPage: React.FC = () => {
                         return null;
                       }}
                     />
-                    <ReferenceLine y={56.15} stroke="#f59e0b" strokeDasharray="3 3" />
+                    <ReferenceLine y={56.21} stroke="#f59e0b" strokeDasharray="3 3" />
                     <Bar dataKey="hit_rate" fill="#f59e0b" radius={[4, 4, 0, 0]} />
                   </BarChart>
                 </ResponsiveContainer>

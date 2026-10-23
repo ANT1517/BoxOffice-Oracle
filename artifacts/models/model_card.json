@@ -1,7 +1,7 @@
 {
   "model_name": "BoxOffice Oracle Dual Predictive Architecture",
   "version": "1.0.0",
-  "training_date": "2026-10-23 08:39:47",
+  "training_date": "2026-10-23 10:46:08",
   "training_rows": 3204,
   "class_distribution": {
     "Hit": 1801,

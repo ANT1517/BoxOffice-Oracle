@@ -108,8 +108,19 @@ export interface MetaResponse {
 
 export interface EDAResponse {
   summary: Record<string, any>;
-  class_distribution: { total: number; Hit: number; Flop: number; hit_rate: number };
-  histograms: Record<string, { bins: number[]; counts: number[] }>;
+  class_distribution: {
+    total: number;
+    binary: {
+      Hit: { count: number; percentage: number };
+      Flop: { count: number; percentage: number };
+    };
+    three_class: {
+      Hit: { count: number; percentage: number };
+      Average: { count: number; percentage: number };
+      Flop: { count: number; percentage: number };
+    };
+  };
+  histograms: Record<string, any>;
   hit_rates: Record<string, Record<string, { count: number; hit_rate: number }>>;
   scatter: { title: string; budget: number; revenue: number; roi: number; label: string }[];
 }
@@ -146,19 +157,55 @@ export interface AssociationRuleItem {
   is_hit_rule: boolean;
 }
 
+export interface AlgorithmBenchmarkDetail {
+  avg_time_seconds: number;
+  times_seconds: number[];
+  frequent_itemsets: number;
+  total_rules: number;
+  class_association_rules: number;
+}
+
+export interface BenchmarkRun {
+  min_support: number;
+  min_confidence: number;
+  num_runs: number;
+  algorithms: {
+    apriori: AlgorithmBenchmarkDetail;
+    fpgrowth: AlgorithmBenchmarkDetail;
+  };
+  verification: {
+    identical_rule_sets: boolean;
+    discrepancy_count: number;
+  };
+}
+
+export interface RulesBenchmarkData {
+  dataset_rows: number;
+  onehot_columns: number;
+  explanation: string;
+  benchmark_min_support_0_03?: BenchmarkRun;
+  benchmark_min_support_0_01?: BenchmarkRun;
+  min_support?: number;
+  algorithms?: {
+    apriori: AlgorithmBenchmarkDetail;
+    fpgrowth: AlgorithmBenchmarkDetail;
+  };
+  verification?: {
+    identical_rule_sets: boolean;
+    discrepancy_count: number;
+  };
+  apriori?: { avg_time_sec: number; itemsets_found: number };
+  fpgrowth?: { avg_time_sec: number; itemsets_found: number };
+  rules_identical?: boolean;
+}
+
 export interface RulesQueryResponse {
   total_matched: number;
   limit: number;
   prerelease_only: boolean;
   consequent_filter: string | null;
   rules: AssociationRuleItem[];
-  benchmark: {
-    dataset_rows: number;
-    apriori: { avg_time_sec: number; itemsets_found: number };
-    fpgrowth: { avg_time_sec: number; itemsets_found: number };
-    rules_identical: boolean;
-    rule_count: number;
-  };
+  benchmark: RulesBenchmarkData;
   summary: {
     total_rules: number;
     hit_rules_count: number;
@@ -176,13 +223,7 @@ export interface RulesResponse {
   top_5_flop_rules: AssociationRuleItem[];
   all_rules: AssociationRuleItem[];
   prerelease_rules: AssociationRuleItem[];
-  benchmark: {
-    dataset_rows: number;
-    apriori: { avg_time_sec: number; itemsets_found: number };
-    fpgrowth: { avg_time_sec: number; itemsets_found: number };
-    rules_identical: boolean;
-    rule_count: number;
-  };
+  benchmark: RulesBenchmarkData;
 }
 
 export interface ClusterCentroid {

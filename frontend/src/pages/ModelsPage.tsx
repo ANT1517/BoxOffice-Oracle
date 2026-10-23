@@ -168,7 +168,7 @@ export const ModelsPage: React.FC = () => {
                 />
                 {/* CRITICAL: 56.2% ZeroR Baseline line */}
                 <ReferenceLine
-                  y={56.15}
+                  y={56.21}
                   stroke="#ef4444"
                   strokeDasharray="4 4"
                   strokeWidth={2}

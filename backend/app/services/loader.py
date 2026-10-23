@@ -77,6 +77,23 @@ class ArtifactStore:
         self.model_b = joblib.load(required_paths["model_b"])
         self.feature_context = joblib.load(required_paths["feature_context"])
 
+        # Configure single-thread inference to prevent Windows joblib process synchronization overhead
+        def _optimize_inference(cal_model):
+            if hasattr(cal_model, "calibrated_classifiers_"):
+                for cc in cal_model.calibrated_classifiers_:
+                    est = getattr(cc, "estimator", None) or getattr(cc, "base_estimator", None)
+                    if hasattr(est, "named_steps") and "clf" in est.named_steps:
+                        est.named_steps["clf"].n_jobs = 1
+                    elif hasattr(est, "n_jobs"):
+                        est.n_jobs = 1
+            if hasattr(cal_model, "estimator") and hasattr(cal_model.estimator, "named_steps"):
+                if "clf" in cal_model.estimator.named_steps:
+                    cal_model.estimator.named_steps["clf"].n_jobs = 1
+
+        _optimize_inference(self.model_a)
+        _optimize_inference(self.model_b)
+
+
         # 2. Lookups
         with open(required_paths["people"], "r", encoding="utf-8") as f:
             self.people_lookup = json.load(f)

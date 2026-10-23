@@ -137,7 +137,7 @@ def predict_movie(movie: MovieInput) -> PredictResponse:
     model_path = (
         "artifacts/models/model_B.joblib" if model_type == "B" else "artifacts/models/model_A.joblib"
     )
-    expl = explain(derived_feats, model_path=model_path, model_type=model_type, top_k=5)
+    expl = explain(derived_feats, model_path=model_path, model_type=model_type, top_k=5, model_obj=model)
     top_factors = [
         FactorContribution(
             feature=str(c["feature"]),

@@ -37,7 +37,7 @@ The number of clusters $k$ was swept from $k = 2$ through $k = 8$:
 | Cluster ID | Market Segment Name | Size (Share) | Hit Share | Median ROI | Avg Budget | Cast Past Rev | Audience Rating | Vote Count |
 | :-: | :--- | :-: | :-: | :-: | :-: | :-: | :-: | :-: | :-: |
 | **0** | **High-Budget, High-Engagement Blockbusters** | 458 (14.29%) | **83.4%** | **3.75x** | $98,728,275 | $176.8M | 6.96 | 3,506 |
-| **1** | **Mid-to-High Budget Mainstream / Risky Studio Releases** | 1,704 (53.18%) | **44.3%** | **1.75x** | $43,885,926 | $132.2M | 5.85 | 587 |
+| **1** | **Mid-Budget, Low-Engagement Mainstream Releases** | 1,704 (53.18%) | **44.3%** | **1.75x** | $43,885,926 | $132.2M | 5.85 | 587 |
 | **2** | **Low-Budget Indie / Sleeper Releases** | 1,042 (32.52%) | **63.7%** | **3.24x** | $10,721,610 | $43.5M | 6.79 | 525 |
 | **All** | *Overall Industry Baseline* | 3,204 (100%) | 56.2% | 2.16x | $40,634,449 | $109.8M | 6.31 | 1,003 |
 
@@ -51,7 +51,7 @@ The number of clusters $k$ was swept from $k = 2$ through $k = 8$:
 - **Commercial Outcome:** **83.4% Hit Share** with a strong **3.75x median ROI**.
 - **Studio Reading:** The primary revenue generator for major studios. While expensive to manufacture, tentpoles with established IP and star director/actor pairings present high commercial certainty.
 
-### Segment 1: Mid-to-High Budget Mainstream / Risky Studio Releases
+### Segment 1: Mid-Budget, Low-Engagement Mainstream Releases
 - **Size & Share:** 1,704 films (53.18% of the market — the majority segment).
 - **Profile:** Solid studio funding (average budget **$43,885,926**) and seasoned cast members ($132.2M), but moderate-to-poor reception (**5.85** rating) and modest engagement (**587 votes**).
 - **Commercial Outcome:** **44.3% Hit Share** and a sub-break-even median ROI of **1.75x**.
