@@ -1,0 +1,488 @@
+[
+  {
+    "attribute": "id",
+    "type": "numeric",
+    "missing": 0,
+    "min": 5.0,
+    "max": 417859.0,
+    "mean": 44685.0961,
+    "std": 74505.2186,
+    "median": 11405.5
+  },
+  {
+    "attribute": "title",
+    "type": "nominal",
+    "missing": 0,
+    "unique_count": 3203,
+    "top_value": "The Host",
+    "top_frequency": 2,
+    "top_percentage": 0.06
+  },
+  {
+    "attribute": "release_date",
+    "type": "nominal",
+    "missing": 0,
+    "unique_count": 2479,
+    "top_value": "2014-12-25 00:00:00",
+    "top_frequency": 7,
+    "top_percentage": 0.22
+  },
+  {
+    "attribute": "release_year",
+    "type": "numeric",
+    "missing": 0,
+    "min": 1916.0,
+    "max": 2016.0,
+    "mean": 2001.7076,
+    "std": 13.204,
+    "median": 2005.0
+  },
+  {
+    "attribute": "budget",
+    "type": "numeric",
+    "missing": 0,
+    "min": 10000.0,
+    "max": 380000000.0,
+    "mean": 40939789.8149,
+    "std": 44446820.852,
+    "median": 25515000.0
+  },
+  {
+    "attribute": "revenue",
+    "type": "numeric",
+    "missing": 0,
+    "min": 10000.0,
+    "max": 2787965087.0,
+    "mean": 122182298.388,
+    "std": 186723365.1433,
+    "median": 56303677.5
+  },
+  {
+    "attribute": "roi_ratio",
+    "type": "numeric",
+    "missing": 0,
+    "min": 0.0009,
+    "max": 12890.3867,
+    "mean": 11.128,
+    "std": 240.328,
+    "median": 2.3056
+  },
+  {
+    "attribute": "label",
+    "type": "nominal",
+    "missing": 0,
+    "unique_count": 2,
+    "top_value": "Hit",
+    "top_frequency": 1801,
+    "top_percentage": 56.21
+  },
+  {
+    "attribute": "label3",
+    "type": "nominal",
+    "missing": 0,
+    "unique_count": 3,
+    "top_value": "Hit",
+    "top_frequency": 1508,
+    "top_percentage": 47.07
+  },
+  {
+    "attribute": "primary_genre",
+    "type": "nominal",
+    "missing": 0,
+    "unique_count": 20,
+    "top_value": "Drama",
+    "top_frequency": 737,
+    "top_percentage": 23.0
+  },
+  {
+    "attribute": "n_genres",
+    "type": "numeric",
+    "missing": 0,
+    "min": 0.0,
+    "max": 7.0,
+    "mean": 2.6514,
+    "std": 1.1208,
+    "median": 3.0
+  },
+  {
+    "attribute": "runtime",
+    "type": "numeric",
+    "missing": 0,
+    "min": 41.0,
+    "max": 338.0,
+    "mean": 110.828,
+    "std": 20.9491,
+    "median": 107.0
+  },
+  {
+    "attribute": "is_english",
+    "type": "numeric",
+    "missing": 0,
+    "min": 0.0,
+    "max": 1.0,
+    "mean": 0.961,
+    "std": 0.1937,
+    "median": 1.0
+  },
+  {
+    "attribute": "big_studio",
+    "type": "numeric",
+    "missing": 0,
+    "min": 0.0,
+    "max": 1.0,
+    "mean": 0.4872,
+    "std": 0.4999,
+    "median": 0.0
+  },
+  {
+    "attribute": "franchise",
+    "type": "numeric",
+    "missing": 0,
+    "min": 0.0,
+    "max": 1.0,
+    "mean": 0.157,
+    "std": 0.3638,
+    "median": 0.0
+  },
+  {
+    "attribute": "release_month",
+    "type": "numeric",
+    "missing": 0,
+    "min": 1.0,
+    "max": 12.0,
+    "mean": 6.9788,
+    "std": 3.3648,
+    "median": 7.0
+  },
+  {
+    "attribute": "season",
+    "type": "nominal",
+    "missing": 0,
+    "unique_count": 4,
+    "top_value": "Regular",
+    "top_frequency": 1405,
+    "top_percentage": 43.85
+  },
+  {
+    "attribute": "holiday_flag",
+    "type": "numeric",
+    "missing": 0,
+    "min": 0.0,
+    "max": 1.0,
+    "mean": 0.1832,
+    "std": 0.3869,
+    "median": 0.0
+  },
+  {
+    "attribute": "cast_avg_past_revenue",
+    "type": "numeric",
+    "missing": 0,
+    "min": 0.0,
+    "max": 989751784.0,
+    "mean": 109735478.5811,
+    "std": 95586876.6312,
+    "median": 101388359.4202
+  },
+  {
+    "attribute": "cast_past_hit_rate",
+    "type": "numeric",
+    "missing": 0,
+    "min": 0.0,
+    "max": 1.0,
+    "mean": 0.5998,
+    "std": 0.232,
+    "median": 0.5621
+  },
+  {
+    "attribute": "cast_past_films",
+    "type": "numeric",
+    "missing": 0,
+    "min": 0.0,
+    "max": 70.0,
+    "mean": 10.2459,
+    "std": 10.7895,
+    "median": 7.0
+  },
+  {
+    "attribute": "dir_avg_past_revenue",
+    "type": "numeric",
+    "missing": 0,
+    "min": 0.0,
+    "max": 938212738.0,
+    "mean": 71553114.3723,
+    "std": 117769557.0484,
+    "median": 12720063.25
+  },
+  {
+    "attribute": "dir_past_hit_rate",
+    "type": "numeric",
+    "missing": 0,
+    "min": 0.0,
+    "max": 1.0,
+    "mean": 0.6301,
+    "std": 0.269,
+    "median": 0.5621
+  },
+  {
+    "attribute": "dir_past_films",
+    "type": "numeric",
+    "missing": 0,
+    "min": 0.0,
+    "max": 26.0,
+    "mean": 1.7369,
+    "std": 2.7116,
+    "median": 1.0
+  },
+  {
+    "attribute": "budget_tier",
+    "type": "nominal",
+    "missing": 0,
+    "unique_count": 3,
+    "top_value": "Low",
+    "top_frequency": 1068,
+    "top_percentage": 33.33
+  },
+  {
+    "attribute": "runtime_bin",
+    "type": "nominal",
+    "missing": 0,
+    "unique_count": 3,
+    "top_value": "Standard",
+    "top_frequency": 1647,
+    "top_percentage": 51.4
+  },
+  {
+    "attribute": "star_tier",
+    "type": "nominal",
+    "missing": 0,
+    "unique_count": 3,
+    "top_value": "LowStar",
+    "top_frequency": 1068,
+    "top_percentage": 33.33
+  },
+  {
+    "attribute": "director_tier",
+    "type": "nominal",
+    "missing": 0,
+    "unique_count": 3,
+    "top_value": "LowDir",
+    "top_frequency": 1068,
+    "top_percentage": 33.33
+  },
+  {
+    "attribute": "hype_level",
+    "type": "nominal",
+    "missing": 0,
+    "unique_count": 3,
+    "top_value": "LowHype",
+    "top_frequency": 1068,
+    "top_percentage": 33.33
+  },
+  {
+    "attribute": "rating_band",
+    "type": "nominal",
+    "missing": 0,
+    "unique_count": 4,
+    "top_value": "Mixed",
+    "top_frequency": 1340,
+    "top_percentage": 41.82
+  },
+  {
+    "attribute": "vote_average",
+    "type": "numeric",
+    "missing": 0,
+    "min": 0.0,
+    "max": 8.5,
+    "mean": 6.3111,
+    "std": 0.8658,
+    "median": 6.3
+  },
+  {
+    "attribute": "vote_count",
+    "type": "numeric",
+    "missing": 0,
+    "min": 0.0,
+    "max": 13752.0,
+    "mean": 983.8752,
+    "std": 1417.7192,
+    "median": 478.5
+  },
+  {
+    "attribute": "popularity",
+    "type": "numeric",
+    "missing": 0,
+    "min": 0.02,
+    "max": 875.5813,
+    "mean": 29.2119,
+    "std": 36.2439,
+    "median": 20.59
+  },
+  {
+    "attribute": "log_budget",
+    "type": "numeric",
+    "missing": 0,
+    "min": 4.0,
+    "max": 8.5798,
+    "mean": 7.3244,
+    "std": 0.604,
+    "median": 7.4068
+  },
+  {
+    "attribute": "director",
+    "type": "nominal",
+    "missing": 2,
+    "unique_count": 1426,
+    "top_value": "Steven Spielberg",
+    "top_frequency": 27,
+    "top_percentage": 0.84
+  },
+  {
+    "attribute": "g_Action",
+    "type": "numeric",
+    "missing": 0,
+    "min": 0.0,
+    "max": 1.0,
+    "mean": 0.2856,
+    "std": 0.4518,
+    "median": 0.0
+  },
+  {
+    "attribute": "g_Adventure",
+    "type": "numeric",
+    "missing": 0,
+    "min": 0.0,
+    "max": 1.0,
+    "mean": 0.2057,
+    "std": 0.4043,
+    "median": 0.0
+  },
+  {
+    "attribute": "g_Animation",
+    "type": "numeric",
+    "missing": 0,
+    "min": 0.0,
+    "max": 1.0,
+    "mean": 0.0581,
+    "std": 0.2339,
+    "median": 0.0
+  },
+  {
+    "attribute": "g_Comedy",
+    "type": "numeric",
+    "missing": 0,
+    "min": 0.0,
+    "max": 1.0,
+    "mean": 0.3433,
+    "std": 0.4749,
+    "median": 0.0
+  },
+  {
+    "attribute": "g_Crime",
+    "type": "numeric",
+    "missing": 0,
+    "min": 0.0,
+    "max": 1.0,
+    "mean": 0.1617,
+    "std": 0.3682,
+    "median": 0.0
+  },
+  {
+    "attribute": "g_Drama",
+    "type": "numeric",
+    "missing": 0,
+    "min": 0.0,
+    "max": 1.0,
+    "mean": 0.4448,
+    "std": 0.497,
+    "median": 0.0
+  },
+  {
+    "attribute": "g_Family",
+    "type": "numeric",
+    "missing": 0,
+    "min": 0.0,
+    "max": 1.0,
+    "mean": 0.1133,
+    "std": 0.317,
+    "median": 0.0
+  },
+  {
+    "attribute": "g_Fantasy",
+    "type": "numeric",
+    "missing": 0,
+    "min": 0.0,
+    "max": 1.0,
+    "mean": 0.1058,
+    "std": 0.3076,
+    "median": 0.0
+  },
+  {
+    "attribute": "g_Horror",
+    "type": "numeric",
+    "missing": 0,
+    "min": 0.0,
+    "max": 1.0,
+    "mean": 0.1027,
+    "std": 0.3036,
+    "median": 0.0
+  },
+  {
+    "attribute": "g_Romance",
+    "type": "numeric",
+    "missing": 0,
+    "min": 0.0,
+    "max": 1.0,
+    "mean": 0.1773,
+    "std": 0.382,
+    "median": 0.0
+  },
+  {
+    "attribute": "g_Science_Fiction",
+    "type": "numeric",
+    "missing": 0,
+    "min": 0.0,
+    "max": 1.0,
+    "mean": 0.1336,
+    "std": 0.3403,
+    "median": 0.0
+  },
+  {
+    "attribute": "g_Thriller",
+    "type": "numeric",
+    "missing": 0,
+    "min": 0.0,
+    "max": 1.0,
+    "mean": 0.2896,
+    "std": 0.4537,
+    "median": 0.0
+  },
+  {
+    "attribute": "log_revenue",
+    "type": "numeric",
+    "missing": 0,
+    "min": 4.0,
+    "max": 9.4453,
+    "mean": 7.6332,
+    "std": 0.7813,
+    "median": 7.7505
+  },
+  {
+    "attribute": "roi_ratio_clipped",
+    "type": "numeric",
+    "missing": 0,
+    "min": 0.0009,
+    "max": 20.0,
+    "mean": 3.7878,
+    "std": 4.4813,
+    "median": 2.3056
+  },
+  {
+    "attribute": "decade",
+    "type": "nominal",
+    "missing": 0,
+    "unique_count": 11,
+    "top_value": "2000s",
+    "top_frequency": 1324,
+    "top_percentage": 41.32
+  }
+]

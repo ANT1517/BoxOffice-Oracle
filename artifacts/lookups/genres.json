@@ -1,0 +1,116 @@
+{
+  "top_genres": [
+    "Action",
+    "Adventure",
+    "Animation",
+    "Comedy",
+    "Crime",
+    "Drama",
+    "Family",
+    "Fantasy",
+    "Horror",
+    "Romance",
+    "Science Fiction",
+    "Thriller"
+  ],
+  "primary_genres": [
+    "Drama",
+    "Comedy",
+    "Action",
+    "Adventure",
+    "Horror",
+    "Crime",
+    "Thriller",
+    "Animation",
+    "Fantasy",
+    "Science Fiction",
+    "Romance",
+    "Family",
+    "Documentary",
+    "Mystery",
+    "Western",
+    "Music",
+    "War",
+    "History",
+    "Unknown",
+    "Foreign"
+  ],
+  "genres": [
+    {
+      "name": "Drama",
+      "count": 1425
+    },
+    {
+      "name": "Comedy",
+      "count": 1100
+    },
+    {
+      "name": "Thriller",
+      "count": 928
+    },
+    {
+      "name": "Action",
+      "count": 915
+    },
+    {
+      "name": "Adventure",
+      "count": 659
+    },
+    {
+      "name": "Romance",
+      "count": 568
+    },
+    {
+      "name": "Crime",
+      "count": 518
+    },
+    {
+      "name": "Science Fiction",
+      "count": 428
+    },
+    {
+      "name": "Family",
+      "count": 363
+    },
+    {
+      "name": "Fantasy",
+      "count": 339
+    },
+    {
+      "name": "Horror",
+      "count": 329
+    },
+    {
+      "name": "Mystery",
+      "count": 264
+    },
+    {
+      "name": "Animation",
+      "count": 186
+    },
+    {
+      "name": "History",
+      "count": 145
+    },
+    {
+      "name": "War",
+      "count": 119
+    },
+    {
+      "name": "Music",
+      "count": 111
+    },
+    {
+      "name": "Western",
+      "count": 57
+    },
+    {
+      "name": "Documentary",
+      "count": 37
+    },
+    {
+      "name": "Foreign",
+      "count": 4
+    }
+  ]
+}

@@ -1,0 +1,141 @@
+{
+  "formula": "Nadeau & Bengio (2003) corrected resampled t-test: t = mean_diff / sqrt(((1/N) + (n_test/n_train)) * sample_var); N=100, n_test/n_train=1/9, df=99",
+  "vs_baseline_model_A": {
+    "ID3": {
+      "mean_f1": 0.551,
+      "diff_vs_baseline": 0.1464,
+      "t_stat": 16.1761,
+      "p_value": 0.0,
+      "significant_at_0_05": true
+    },
+    "CART": {
+      "mean_f1": 0.5913,
+      "diff_vs_baseline": 0.1867,
+      "t_stat": 16.4082,
+      "p_value": 0.0,
+      "significant_at_0_05": true
+    },
+    "GaussianNB": {
+      "mean_f1": 0.42,
+      "diff_vs_baseline": 0.0154,
+      "t_stat": 2.0369,
+      "p_value": 0.044328,
+      "significant_at_0_05": true
+    },
+    "CategoricalNB": {
+      "mean_f1": 0.6039,
+      "diff_vs_baseline": 0.1993,
+      "t_stat": 18.5805,
+      "p_value": 0.0,
+      "significant_at_0_05": true
+    },
+    "KNN": {
+      "mean_f1": 0.5947,
+      "diff_vs_baseline": 0.1902,
+      "t_stat": 20.8255,
+      "p_value": 0.0,
+      "significant_at_0_05": true
+    },
+    "RandomForest": {
+      "mean_f1": 0.615,
+      "diff_vs_baseline": 0.2104,
+      "t_stat": 20.4484,
+      "p_value": 0.0,
+      "significant_at_0_05": true
+    }
+  },
+  "vs_baseline_model_B": {
+    "ID3": {
+      "mean_f1": 0.6564,
+      "diff_vs_baseline": 0.2518,
+      "t_stat": 24.8304,
+      "p_value": 0.0,
+      "significant_at_0_05": true
+    },
+    "CART": {
+      "mean_f1": 0.7286,
+      "diff_vs_baseline": 0.324,
+      "t_stat": 38.9254,
+      "p_value": 0.0,
+      "significant_at_0_05": true
+    },
+    "GaussianNB": {
+      "mean_f1": 0.4227,
+      "diff_vs_baseline": 0.0182,
+      "t_stat": 2.0865,
+      "p_value": 0.039506,
+      "significant_at_0_05": true
+    },
+    "CategoricalNB": {
+      "mean_f1": 0.7112,
+      "diff_vs_baseline": 0.3066,
+      "t_stat": 31.8023,
+      "p_value": 0.0,
+      "significant_at_0_05": true
+    },
+    "KNN": {
+      "mean_f1": 0.6809,
+      "diff_vs_baseline": 0.2763,
+      "t_stat": 31.5448,
+      "p_value": 0.0,
+      "significant_at_0_05": true
+    },
+    "RandomForest": {
+      "mean_f1": 0.7526,
+      "diff_vs_baseline": 0.3481,
+      "t_stat": 40.0126,
+      "p_value": 0.0,
+      "significant_at_0_05": true
+    }
+  },
+  "model_A_vs_model_B": {
+    "ID3": {
+      "mean_f1_model_A": 0.551,
+      "mean_f1_model_B": 0.6564,
+      "delta_B_minus_A": 0.1054,
+      "t_stat": 8.8855,
+      "p_value": 0.0,
+      "significant_at_0_05": true
+    },
+    "CART": {
+      "mean_f1_model_A": 0.5913,
+      "mean_f1_model_B": 0.7286,
+      "delta_B_minus_A": 0.1373,
+      "t_stat": 10.5482,
+      "p_value": 0.0,
+      "significant_at_0_05": true
+    },
+    "GaussianNB": {
+      "mean_f1_model_A": 0.42,
+      "mean_f1_model_B": 0.4227,
+      "delta_B_minus_A": 0.0027,
+      "t_stat": 1.2899,
+      "p_value": 0.200103,
+      "significant_at_0_05": false
+    },
+    "CategoricalNB": {
+      "mean_f1_model_A": 0.6039,
+      "mean_f1_model_B": 0.7112,
+      "delta_B_minus_A": 0.1073,
+      "t_stat": 9.3838,
+      "p_value": 0.0,
+      "significant_at_0_05": true
+    },
+    "KNN": {
+      "mean_f1_model_A": 0.5947,
+      "mean_f1_model_B": 0.6809,
+      "delta_B_minus_A": 0.0862,
+      "t_stat": 10.7053,
+      "p_value": 0.0,
+      "significant_at_0_05": true
+    },
+    "RandomForest": {
+      "mean_f1_model_A": 0.615,
+      "mean_f1_model_B": 0.7526,
+      "delta_B_minus_A": 0.1377,
+      "t_stat": 11.5689,
+      "p_value": 0.0,
+      "significant_at_0_05": true
+    }
+  }
+}

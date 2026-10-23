@@ -1,0 +1,275 @@
+{
+  "operation": "Drill-down",
+  "description": "Decomposition moving down the Time hierarchy into individual years (2000-2009) and months.",
+  "years_2000s": {
+    "type": "1D_table",
+    "rows": [
+      "release_year"
+    ],
+    "cols": [],
+    "measures": [
+      "count",
+      "hit_rate",
+      "median_roi",
+      "avg_roi",
+      "median_budget"
+    ],
+    "filters": {
+      "decade": "2000s"
+    },
+    "total_movies": 1324,
+    "data": [
+      {
+        "count": 106,
+        "low_confidence": false,
+        "small_sample": false,
+        "hit_rate": 0.4811,
+        "median_roi": 1.92,
+        "avg_roi": 2.64,
+        "median_budget": 34500000.0,
+        "release_year": "2000"
+      },
+      {
+        "count": 121,
+        "low_confidence": false,
+        "small_sample": false,
+        "hit_rate": 0.4463,
+        "median_roi": 1.75,
+        "avg_roi": 2.92,
+        "median_budget": 35000000.0,
+        "release_year": "2001"
+      },
+      {
+        "count": 131,
+        "low_confidence": false,
+        "small_sample": false,
+        "hit_rate": 0.4962,
+        "median_roi": 1.95,
+        "avg_roi": 3.55,
+        "median_budget": 35000000.0,
+        "release_year": "2002"
+      },
+      {
+        "count": 106,
+        "low_confidence": false,
+        "small_sample": false,
+        "hit_rate": 0.5849,
+        "median_roi": 2.29,
+        "avg_roi": 3.42,
+        "median_budget": 35500000.0,
+        "release_year": "2003"
+      },
+      {
+        "count": 134,
+        "low_confidence": false,
+        "small_sample": false,
+        "hit_rate": 0.5149,
+        "median_roi": 2.19,
+        "avg_roi": 10.91,
+        "median_budget": 30000000.0,
+        "release_year": "2004"
+      },
+      {
+        "count": 143,
+        "low_confidence": false,
+        "small_sample": false,
+        "hit_rate": 0.4755,
+        "median_roi": 1.9,
+        "avg_roi": 3.02,
+        "median_budget": 30000000.0,
+        "release_year": "2005"
+      },
+      {
+        "count": 162,
+        "low_confidence": false,
+        "small_sample": false,
+        "hit_rate": 0.4753,
+        "median_roi": 1.88,
+        "avg_roi": 3.72,
+        "median_budget": 25500000.0,
+        "release_year": "2006"
+      },
+      {
+        "count": 124,
+        "low_confidence": false,
+        "small_sample": false,
+        "hit_rate": 0.5242,
+        "median_roi": 2.07,
+        "avg_roi": 107.95,
+        "median_budget": 25000000.0,
+        "release_year": "2007"
+      },
+      {
+        "count": 145,
+        "low_confidence": false,
+        "small_sample": false,
+        "hit_rate": 0.5241,
+        "median_roi": 2.07,
+        "avg_roi": 3.1,
+        "median_budget": 30000000.0,
+        "release_year": "2008"
+      },
+      {
+        "count": 152,
+        "low_confidence": false,
+        "small_sample": false,
+        "hit_rate": 0.4671,
+        "median_roi": 1.77,
+        "avg_roi": 2.6,
+        "median_budget": 30000000.0,
+        "release_year": "2009"
+      }
+    ]
+  },
+  "season_to_month": {
+    "type": "1D_table",
+    "rows": [
+      "season",
+      "release_month"
+    ],
+    "cols": [],
+    "measures": [
+      "count",
+      "hit_rate",
+      "median_roi",
+      "avg_roi",
+      "median_budget"
+    ],
+    "filters": {},
+    "total_movies": 3204,
+    "data": [
+      {
+        "count": 190,
+        "low_confidence": false,
+        "small_sample": false,
+        "hit_rate": 0.5368,
+        "median_roi": 2.17,
+        "avg_roi": 6.42,
+        "median_budget": 18000000.0,
+        "season": "Dump",
+        "release_month": "1"
+      },
+      {
+        "count": 224,
+        "low_confidence": false,
+        "small_sample": false,
+        "hit_rate": 0.5179,
+        "median_roi": 2.08,
+        "avg_roi": 3.86,
+        "median_budget": 25000000.0,
+        "season": "Dump",
+        "release_month": "2"
+      },
+      {
+        "count": 255,
+        "low_confidence": false,
+        "small_sample": false,
+        "hit_rate": 0.5961,
+        "median_roi": 2.61,
+        "avg_roi": 4.92,
+        "median_budget": 30000000.0,
+        "season": "Holiday",
+        "release_month": "11"
+      },
+      {
+        "count": 332,
+        "low_confidence": false,
+        "small_sample": false,
+        "hit_rate": 0.6265,
+        "median_roi": 2.68,
+        "avg_roi": 4.79,
+        "median_budget": 35000000.0,
+        "season": "Holiday",
+        "release_month": "12"
+      },
+      {
+        "count": 238,
+        "low_confidence": false,
+        "small_sample": false,
+        "hit_rate": 0.5462,
+        "median_roi": 2.13,
+        "avg_roi": 9.33,
+        "median_budget": 28500000.0,
+        "season": "Regular",
+        "release_month": "3"
+      },
+      {
+        "count": 220,
+        "low_confidence": false,
+        "small_sample": false,
+        "hit_rate": 0.5227,
+        "median_roi": 2.13,
+        "avg_roi": 5.54,
+        "median_budget": 25000000.0,
+        "season": "Regular",
+        "release_month": "4"
+      },
+      {
+        "count": 279,
+        "low_confidence": false,
+        "small_sample": false,
+        "hit_rate": 0.5305,
+        "median_roi": 2.07,
+        "avg_roi": 6.83,
+        "median_budget": 25000000.0,
+        "season": "Regular",
+        "release_month": "8"
+      },
+      {
+        "count": 380,
+        "low_confidence": false,
+        "small_sample": false,
+        "hit_rate": 0.4342,
+        "median_roi": 1.75,
+        "avg_roi": 38.35,
+        "median_budget": 19400000.0,
+        "season": "Regular",
+        "release_month": "9"
+      },
+      {
+        "count": 288,
+        "low_confidence": false,
+        "small_sample": false,
+        "hit_rate": 0.5243,
+        "median_roi": 2.14,
+        "avg_roi": 7.93,
+        "median_budget": 20000000.0,
+        "season": "Regular",
+        "release_month": "10"
+      },
+      {
+        "count": 244,
+        "low_confidence": false,
+        "small_sample": false,
+        "hit_rate": 0.627,
+        "median_roi": 2.7,
+        "avg_roi": 4.31,
+        "median_budget": 30000000.0,
+        "season": "Summer",
+        "release_month": "5"
+      },
+      {
+        "count": 291,
+        "low_confidence": false,
+        "small_sample": false,
+        "hit_rate": 0.6735,
+        "median_roi": 2.94,
+        "avg_roi": 4.97,
+        "median_budget": 40000000.0,
+        "season": "Summer",
+        "release_month": "6"
+      },
+      {
+        "count": 263,
+        "low_confidence": false,
+        "small_sample": false,
+        "hit_rate": 0.6274,
+        "median_roi": 2.65,
+        "avg_roi": 22.91,
+        "median_budget": 35000000.0,
+        "season": "Summer",
+        "release_month": "7"
+      }
+    ]
+  }
+}

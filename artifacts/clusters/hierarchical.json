@@ -1,0 +1,21 @@
+{
+  "sample_size": 300,
+  "chosen_k": 3,
+  "ari_vs_kmeans": {
+    "ward": 0.2452,
+    "average": 0.0322,
+    "complete": 0.024
+  },
+  "sample_film_titles": [
+    "Fahrenheit 9/11",
+    "Secret in Their Eyes",
+    "The Act of Killing",
+    "Clerks",
+    "Absolute Power",
+    "Gattaca",
+    "Blue Valentine",
+    "The Midnight Meat Train",
+    "Chicken Run",
+    "17 Again"
+  ]
+}

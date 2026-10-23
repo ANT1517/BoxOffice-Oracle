@@ -1,0 +1,297 @@
+{
+  "Model_A": {
+    "top_mutual_information": [
+      [
+        "num__franchise",
+        0.0225
+      ],
+      [
+        "cat__primary_genre_Romance",
+        0.0195
+      ],
+      [
+        "num__log_budget",
+        0.0184
+      ],
+      [
+        "cat__primary_genre_History",
+        0.0159
+      ],
+      [
+        "cat__primary_genre_Horror",
+        0.0152
+      ],
+      [
+        "cat__primary_genre_Drama",
+        0.0144
+      ],
+      [
+        "cat__season_Dump",
+        0.0141
+      ],
+      [
+        "cat__primary_genre_Music",
+        0.0133
+      ],
+      [
+        "num__dir_past_hit_rate",
+        0.0115
+      ],
+      [
+        "num__big_studio",
+        0.0109
+      ]
+    ],
+    "top_rf_impurity_mdi": [
+      [
+        "num__log_budget",
+        0.1452
+      ],
+      [
+        "num__cast_past_hit_rate",
+        0.0923
+      ],
+      [
+        "num__cast_avg_past_revenue",
+        0.0873
+      ],
+      [
+        "num__runtime",
+        0.082
+      ],
+      [
+        "num__franchise",
+        0.082
+      ],
+      [
+        "num__cast_past_films",
+        0.0659
+      ],
+      [
+        "num__dir_avg_past_revenue",
+        0.0638
+      ],
+      [
+        "num__dir_past_hit_rate",
+        0.0472
+      ],
+      [
+        "num__release_month",
+        0.0435
+      ],
+      [
+        "num__dir_past_films",
+        0.0379
+      ]
+    ],
+    "top_permutation_importance": [
+      [
+        "log_budget",
+        0.0556
+      ],
+      [
+        "cast_past_hit_rate",
+        0.0499
+      ],
+      [
+        "season",
+        0.0479
+      ],
+      [
+        "primary_genre",
+        0.0468
+      ],
+      [
+        "franchise",
+        0.0393
+      ],
+      [
+        "big_studio",
+        0.03
+      ],
+      [
+        "cast_avg_past_revenue",
+        0.0274
+      ],
+      [
+        "runtime",
+        0.0273
+      ],
+      [
+        "dir_past_hit_rate",
+        0.027
+      ],
+      [
+        "cast_past_films",
+        0.0268
+      ]
+    ],
+    "all_permutation_importance": {
+      "log_budget": 0.0556,
+      "runtime": 0.0273,
+      "n_genres": 0.0148,
+      "is_english": 0.0009,
+      "big_studio": 0.03,
+      "franchise": 0.0393,
+      "release_month": 0.0135,
+      "holiday_flag": 0.0041,
+      "cast_avg_past_revenue": 0.0274,
+      "cast_past_hit_rate": 0.0499,
+      "cast_past_films": 0.0268,
+      "dir_avg_past_revenue": 0.0219,
+      "dir_past_hit_rate": 0.027,
+      "dir_past_films": 0.011,
+      "primary_genre": 0.0468,
+      "season": 0.0479
+    }
+  },
+  "Model_B": {
+    "top_mutual_information": [
+      [
+        "num__vote_count",
+        0.1098
+      ],
+      [
+        "num__popularity",
+        0.0756
+      ],
+      [
+        "num__vote_average",
+        0.0271
+      ],
+      [
+        "num__log_budget",
+        0.0184
+      ],
+      [
+        "num__release_month",
+        0.0161
+      ],
+      [
+        "num__franchise",
+        0.0109
+      ],
+      [
+        "cat__primary_genre_Documentary",
+        0.0104
+      ],
+      [
+        "cat__primary_genre_Drama",
+        0.0104
+      ],
+      [
+        "cat__primary_genre_Animation",
+        0.0092
+      ],
+      [
+        "cat__primary_genre_Foreign",
+        0.0081
+      ]
+    ],
+    "top_rf_impurity_mdi": [
+      [
+        "num__vote_count",
+        0.1658
+      ],
+      [
+        "num__popularity",
+        0.134
+      ],
+      [
+        "num__log_budget",
+        0.0953
+      ],
+      [
+        "num__vote_average",
+        0.0761
+      ],
+      [
+        "num__cast_avg_past_revenue",
+        0.0642
+      ],
+      [
+        "num__runtime",
+        0.0609
+      ],
+      [
+        "num__cast_past_films",
+        0.0547
+      ],
+      [
+        "num__cast_past_hit_rate",
+        0.053
+      ],
+      [
+        "num__dir_avg_past_revenue",
+        0.0397
+      ],
+      [
+        "num__release_month",
+        0.0347
+      ]
+    ],
+    "top_permutation_importance": [
+      [
+        "vote_count",
+        0.1853
+      ],
+      [
+        "log_budget",
+        0.0827
+      ],
+      [
+        "popularity",
+        0.0429
+      ],
+      [
+        "vote_average",
+        0.0208
+      ],
+      [
+        "cast_past_hit_rate",
+        0.0168
+      ],
+      [
+        "cast_avg_past_revenue",
+        0.015
+      ],
+      [
+        "primary_genre",
+        0.0138
+      ],
+      [
+        "cast_past_films",
+        0.012
+      ],
+      [
+        "franchise",
+        0.0112
+      ],
+      [
+        "season",
+        0.0096
+      ]
+    ],
+    "all_permutation_importance": {
+      "log_budget": 0.0827,
+      "runtime": 0.0068,
+      "n_genres": 0.002,
+      "is_english": 0.0,
+      "big_studio": 0.0061,
+      "franchise": 0.0112,
+      "release_month": 0.0021,
+      "holiday_flag": 0.0,
+      "cast_avg_past_revenue": 0.015,
+      "cast_past_hit_rate": 0.0168,
+      "cast_past_films": 0.012,
+      "dir_avg_past_revenue": 0.003,
+      "dir_past_hit_rate": 0.0012,
+      "dir_past_films": 0.0011,
+      "primary_genre": 0.0138,
+      "season": 0.0096,
+      "vote_average": 0.0208,
+      "vote_count": 0.1853,
+      "popularity": 0.0429
+    }
+  }
+}

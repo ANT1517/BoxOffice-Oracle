@@ -1,0 +1,46 @@
+|--- num__franchise <= 0.50
+|   |--- num__log_budget <= 6.69
+|   |   |--- num__big_studio <= 0.50
+|   |   |   |--- num__log_budget <= 5.68
+|   |   |   |   |--- class: 1
+|   |   |   |--- num__log_budget >  5.68
+|   |   |   |   |--- class: 1
+|   |   |--- num__big_studio >  0.50
+|   |   |   |--- num__log_budget <= 6.31
+|   |   |   |   |--- class: 1
+|   |   |   |--- num__log_budget >  6.31
+|   |   |   |   |--- class: 1
+|   |--- num__log_budget >  6.69
+|   |   |--- num__big_studio <= 0.50
+|   |   |   |--- cat__primary_genre_Horror <= 0.50
+|   |   |   |   |--- class: 0
+|   |   |   |--- cat__primary_genre_Horror >  0.50
+|   |   |   |   |--- class: 1
+|   |   |--- num__big_studio >  0.50
+|   |   |   |--- num__log_budget <= 7.09
+|   |   |   |   |--- class: 1
+|   |   |   |--- num__log_budget >  7.09
+|   |   |   |   |--- class: 1
+|--- num__franchise >  0.50
+|   |--- num__runtime <= 123.50
+|   |   |--- num__runtime <= 95.50
+|   |   |   |--- num__cast_past_films <= 15.50
+|   |   |   |   |--- class: 1
+|   |   |   |--- num__cast_past_films >  15.50
+|   |   |   |   |--- class: 1
+|   |   |--- num__runtime >  95.50
+|   |   |   |--- num__cast_past_hit_rate <= 0.62
+|   |   |   |   |--- class: 1
+|   |   |   |--- num__cast_past_hit_rate >  0.62
+|   |   |   |   |--- class: 1
+|   |--- num__runtime >  123.50
+|   |   |--- num__is_english <= 0.50
+|   |   |   |--- num__release_month <= 8.50
+|   |   |   |   |--- class: 0
+|   |   |   |--- num__release_month >  8.50
+|   |   |   |   |--- class: 1
+|   |   |--- num__is_english >  0.50
+|   |   |   |--- num__dir_past_hit_rate <= 0.96
+|   |   |   |   |--- class: 1
+|   |   |   |--- num__dir_past_hit_rate >  0.96
+|   |   |   |   |--- class: 1

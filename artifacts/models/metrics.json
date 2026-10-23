@@ -1,0 +1,824 @@
+{
+  "Model_A": {
+    "ZeroR (Baseline)": {
+      "accuracy": 0.5621,
+      "precision": 0.5621,
+      "recall": 1.0,
+      "f1_hit": 0.7197,
+      "weighted_f1": 0.4045,
+      "roc_auc": 0.5,
+      "cohen_kappa": 0.0,
+      "confusion_matrix": [
+        [
+          0,
+          1403
+        ],
+        [
+          0,
+          1801
+        ]
+      ]
+    },
+    "ID3-style Tree": {
+      "accuracy": 0.5474,
+      "precision": 0.5987,
+      "recall": 0.5913,
+      "f1_hit": 0.595,
+      "weighted_f1": 0.5478,
+      "roc_auc": 0.5433,
+      "cohen_kappa": 0.0823,
+      "confusion_matrix": [
+        [
+          689,
+          714
+        ],
+        [
+          736,
+          1065
+        ]
+      ]
+    },
+    "CART / C4.5 Tree": {
+      "accuracy": 0.5855,
+      "precision": 0.6283,
+      "recall": 0.643,
+      "f1_hit": 0.6356,
+      "weighted_f1": 0.5848,
+      "roc_auc": 0.624,
+      "cohen_kappa": 0.1553,
+      "confusion_matrix": [
+        [
+          718,
+          685
+        ],
+        [
+          643,
+          1158
+        ]
+      ],
+      "tuned_min_samples_leaf": 25,
+      "leaf_choices_per_fold": [
+        25,
+        25,
+        25,
+        25,
+        25,
+        25,
+        25,
+        25,
+        10,
+        25
+      ],
+      "fixed_leaf_evaluations": {
+        "leaf_2": {
+          "accuracy": 0.5612,
+          "precision": 0.6167,
+          "recall": 0.5797,
+          "f1_hit": 0.5976,
+          "weighted_f1": 0.5625,
+          "roc_auc": 0.5588,
+          "cohen_kappa": 0.1161,
+          "confusion_matrix": [
+            [
+              754,
+              649
+            ],
+            [
+              757,
+              1044
+            ]
+          ]
+        },
+        "leaf_10": {
+          "accuracy": 0.5693,
+          "precision": 0.6181,
+          "recall": 0.6119,
+          "f1_hit": 0.615,
+          "weighted_f1": 0.5696,
+          "roc_auc": 0.6023,
+          "cohen_kappa": 0.1263,
+          "confusion_matrix": [
+            [
+              722,
+              681
+            ],
+            [
+              699,
+              1102
+            ]
+          ]
+        },
+        "leaf_25": {
+          "accuracy": 0.5924,
+          "precision": 0.6347,
+          "recall": 0.6474,
+          "f1_hit": 0.641,
+          "weighted_f1": 0.5918,
+          "roc_auc": 0.6286,
+          "cohen_kappa": 0.1696,
+          "confusion_matrix": [
+            [
+              732,
+              671
+            ],
+            [
+              635,
+              1166
+            ]
+          ]
+        }
+      }
+    },
+    "CART (leaf_2)": {
+      "accuracy": 0.5612,
+      "precision": 0.6167,
+      "recall": 0.5797,
+      "f1_hit": 0.5976,
+      "weighted_f1": 0.5625,
+      "roc_auc": 0.5588,
+      "cohen_kappa": 0.1161,
+      "confusion_matrix": [
+        [
+          754,
+          649
+        ],
+        [
+          757,
+          1044
+        ]
+      ]
+    },
+    "CART (leaf_10)": {
+      "accuracy": 0.5693,
+      "precision": 0.6181,
+      "recall": 0.6119,
+      "f1_hit": 0.615,
+      "weighted_f1": 0.5696,
+      "roc_auc": 0.6023,
+      "cohen_kappa": 0.1263,
+      "confusion_matrix": [
+        [
+          722,
+          681
+        ],
+        [
+          699,
+          1102
+        ]
+      ]
+    },
+    "CART (leaf_25)": {
+      "accuracy": 0.5924,
+      "precision": 0.6347,
+      "recall": 0.6474,
+      "f1_hit": 0.641,
+      "weighted_f1": 0.5918,
+      "roc_auc": 0.6286,
+      "cohen_kappa": 0.1696,
+      "confusion_matrix": [
+        [
+          732,
+          671
+        ],
+        [
+          635,
+          1166
+        ]
+      ]
+    },
+    "Gaussian Naive Bayes": {
+      "accuracy": 0.5612,
+      "precision": 0.5626,
+      "recall": 0.9856,
+      "f1_hit": 0.7163,
+      "weighted_f1": 0.4165,
+      "roc_auc": 0.5901,
+      "cohen_kappa": 0.0022,
+      "confusion_matrix": [
+        [
+          23,
+          1380
+        ],
+        [
+          26,
+          1775
+        ]
+      ]
+    },
+    "Categorical Naive Bayes": {
+      "accuracy": 0.6158,
+      "precision": 0.6319,
+      "recall": 0.7579,
+      "f1_hit": 0.6892,
+      "weighted_f1": 0.605,
+      "roc_auc": 0.6527,
+      "cohen_kappa": 0.1968,
+      "confusion_matrix": [
+        [
+          608,
+          795
+        ],
+        [
+          436,
+          1365
+        ]
+      ]
+    },
+    "KNN (k=1)": {
+      "accuracy": 0.5712,
+      "precision": 0.6188,
+      "recall": 0.6174,
+      "f1_hit": 0.6181,
+      "weighted_f1": 0.5712,
+      "roc_auc": 0.5646,
+      "cohen_kappa": 0.1292,
+      "confusion_matrix": [
+        [
+          718,
+          685
+        ],
+        [
+          689,
+          1112
+        ]
+      ]
+    },
+    "KNN (k=3)": {
+      "accuracy": 0.5827,
+      "precision": 0.6242,
+      "recall": 0.6474,
+      "f1_hit": 0.6356,
+      "weighted_f1": 0.5814,
+      "roc_auc": 0.5986,
+      "cohen_kappa": 0.1478,
+      "confusion_matrix": [
+        [
+          701,
+          702
+        ],
+        [
+          635,
+          1166
+        ]
+      ]
+    },
+    "KNN (k=5)": {
+      "accuracy": 0.5783,
+      "precision": 0.6172,
+      "recall": 0.658,
+      "f1_hit": 0.6369,
+      "weighted_f1": 0.5757,
+      "roc_auc": 0.6067,
+      "cohen_kappa": 0.1354,
+      "confusion_matrix": [
+        [
+          668,
+          735
+        ],
+        [
+          616,
+          1185
+        ]
+      ]
+    },
+    "KNN (k=7)": {
+      "accuracy": 0.5858,
+      "precision": 0.6218,
+      "recall": 0.6718,
+      "f1_hit": 0.6459,
+      "weighted_f1": 0.5826,
+      "roc_auc": 0.6152,
+      "cohen_kappa": 0.149,
+      "confusion_matrix": [
+        [
+          667,
+          736
+        ],
+        [
+          591,
+          1210
+        ]
+      ]
+    },
+    "KNN (k=9)": {
+      "accuracy": 0.5961,
+      "precision": 0.6289,
+      "recall": 0.6868,
+      "f1_hit": 0.6566,
+      "weighted_f1": 0.5923,
+      "roc_auc": 0.6249,
+      "cohen_kappa": 0.1687,
+      "confusion_matrix": [
+        [
+          673,
+          730
+        ],
+        [
+          564,
+          1237
+        ]
+      ]
+    },
+    "KNN (k=11)": {
+      "accuracy": 0.6027,
+      "precision": 0.635,
+      "recall": 0.6896,
+      "f1_hit": 0.6612,
+      "weighted_f1": 0.5993,
+      "roc_auc": 0.6327,
+      "cohen_kappa": 0.1829,
+      "confusion_matrix": [
+        [
+          689,
+          714
+        ],
+        [
+          559,
+          1242
+        ]
+      ]
+    },
+    "KNN (k=15)": {
+      "accuracy": 0.5893,
+      "precision": 0.623,
+      "recall": 0.6818,
+      "f1_hit": 0.6511,
+      "weighted_f1": 0.5853,
+      "roc_auc": 0.6364,
+      "cohen_kappa": 0.1543,
+      "confusion_matrix": [
+        [
+          660,
+          743
+        ],
+        [
+          573,
+          1228
+        ]
+      ]
+    },
+    "KNN (Best k)": {
+      "accuracy": 0.6027,
+      "precision": 0.635,
+      "recall": 0.6896,
+      "f1_hit": 0.6612,
+      "weighted_f1": 0.5993,
+      "roc_auc": 0.6327,
+      "cohen_kappa": 0.1829,
+      "confusion_matrix": [
+        [
+          689,
+          714
+        ],
+        [
+          559,
+          1242
+        ]
+      ],
+      "best_k": 11
+    },
+    "Random Forest": {
+      "accuracy": 0.6161,
+      "precision": 0.6396,
+      "recall": 0.7263,
+      "f1_hit": 0.6802,
+      "weighted_f1": 0.61,
+      "roc_auc": 0.6673,
+      "cohen_kappa": 0.2049,
+      "confusion_matrix": [
+        [
+          666,
+          737
+        ],
+        [
+          493,
+          1308
+        ]
+      ],
+      "tuned_max_depth": 8,
+      "depth_choices_per_fold": [
+        "12",
+        "8",
+        "8",
+        "12",
+        "8",
+        "8",
+        "12",
+        "8",
+        "8",
+        "8"
+      ]
+    }
+  },
+  "Model_B": {
+    "ZeroR (Baseline)": {
+      "accuracy": 0.5621,
+      "precision": 0.5621,
+      "recall": 1.0,
+      "f1_hit": 0.7197,
+      "weighted_f1": 0.4045,
+      "roc_auc": 0.5,
+      "cohen_kappa": 0.0,
+      "confusion_matrix": [
+        [
+          0,
+          1403
+        ],
+        [
+          0,
+          1801
+        ]
+      ]
+    },
+    "ID3-style Tree": {
+      "accuracy": 0.6473,
+      "precision": 0.6882,
+      "recall": 0.6813,
+      "f1_hit": 0.6847,
+      "weighted_f1": 0.6476,
+      "roc_auc": 0.6426,
+      "cohen_kappa": 0.2846,
+      "confusion_matrix": [
+        [
+          847,
+          556
+        ],
+        [
+          574,
+          1227
+        ]
+      ]
+    },
+    "CART / C4.5 Tree": {
+      "accuracy": 0.7369,
+      "precision": 0.7646,
+      "recall": 0.7685,
+      "f1_hit": 0.7665,
+      "weighted_f1": 0.7368,
+      "roc_auc": 0.803,
+      "cohen_kappa": 0.4652,
+      "confusion_matrix": [
+        [
+          977,
+          426
+        ],
+        [
+          417,
+          1384
+        ]
+      ],
+      "tuned_min_samples_leaf": 25,
+      "leaf_choices_per_fold": [
+        25,
+        10,
+        25,
+        25,
+        25,
+        25,
+        25,
+        25,
+        25,
+        25
+      ],
+      "fixed_leaf_evaluations": {
+        "leaf_2": {
+          "accuracy": 0.6876,
+          "precision": 0.7291,
+          "recall": 0.7068,
+          "f1_hit": 0.7178,
+          "weighted_f1": 0.6882,
+          "roc_auc": 0.6988,
+          "cohen_kappa": 0.3681,
+          "confusion_matrix": [
+            [
+              930,
+              473
+            ],
+            [
+              528,
+              1273
+            ]
+          ]
+        },
+        "leaf_10": {
+          "accuracy": 0.7097,
+          "precision": 0.7462,
+          "recall": 0.7329,
+          "f1_hit": 0.7395,
+          "weighted_f1": 0.7101,
+          "roc_auc": 0.774,
+          "cohen_kappa": 0.4119,
+          "confusion_matrix": [
+            [
+              954,
+              449
+            ],
+            [
+              481,
+              1320
+            ]
+          ]
+        },
+        "leaf_25": {
+          "accuracy": 0.7385,
+          "precision": 0.7644,
+          "recall": 0.7729,
+          "f1_hit": 0.7686,
+          "weighted_f1": 0.7382,
+          "roc_auc": 0.8051,
+          "cohen_kappa": 0.4679,
+          "confusion_matrix": [
+            [
+              974,
+              429
+            ],
+            [
+              409,
+              1392
+            ]
+          ]
+        }
+      }
+    },
+    "CART (leaf_2)": {
+      "accuracy": 0.6876,
+      "precision": 0.7291,
+      "recall": 0.7068,
+      "f1_hit": 0.7178,
+      "weighted_f1": 0.6882,
+      "roc_auc": 0.6988,
+      "cohen_kappa": 0.3681,
+      "confusion_matrix": [
+        [
+          930,
+          473
+        ],
+        [
+          528,
+          1273
+        ]
+      ]
+    },
+    "CART (leaf_10)": {
+      "accuracy": 0.7097,
+      "precision": 0.7462,
+      "recall": 0.7329,
+      "f1_hit": 0.7395,
+      "weighted_f1": 0.7101,
+      "roc_auc": 0.774,
+      "cohen_kappa": 0.4119,
+      "confusion_matrix": [
+        [
+          954,
+          449
+        ],
+        [
+          481,
+          1320
+        ]
+      ]
+    },
+    "CART (leaf_25)": {
+      "accuracy": 0.7385,
+      "precision": 0.7644,
+      "recall": 0.7729,
+      "f1_hit": 0.7686,
+      "weighted_f1": 0.7382,
+      "roc_auc": 0.8051,
+      "cohen_kappa": 0.4679,
+      "confusion_matrix": [
+        [
+          974,
+          429
+        ],
+        [
+          409,
+          1392
+        ]
+      ]
+    },
+    "Gaussian Naive Bayes": {
+      "accuracy": 0.5627,
+      "precision": 0.5635,
+      "recall": 0.985,
+      "f1_hit": 0.7169,
+      "weighted_f1": 0.4204,
+      "roc_auc": 0.6789,
+      "cohen_kappa": 0.0064,
+      "confusion_matrix": [
+        [
+          29,
+          1374
+        ],
+        [
+          27,
+          1774
+        ]
+      ]
+    },
+    "Categorical Naive Bayes": {
+      "accuracy": 0.7119,
+      "precision": 0.7402,
+      "recall": 0.7512,
+      "f1_hit": 0.7457,
+      "weighted_f1": 0.7116,
+      "roc_auc": 0.776,
+      "cohen_kappa": 0.4136,
+      "confusion_matrix": [
+        [
+          928,
+          475
+        ],
+        [
+          448,
+          1353
+        ]
+      ]
+    },
+    "KNN (k=1)": {
+      "accuracy": 0.6239,
+      "precision": 0.6637,
+      "recall": 0.6707,
+      "f1_hit": 0.6672,
+      "weighted_f1": 0.6236,
+      "roc_auc": 0.6173,
+      "cohen_kappa": 0.2349,
+      "confusion_matrix": [
+        [
+          791,
+          612
+        ],
+        [
+          593,
+          1208
+        ]
+      ]
+    },
+    "KNN (k=3)": {
+      "accuracy": 0.6548,
+      "precision": 0.6861,
+      "recall": 0.7113,
+      "f1_hit": 0.6985,
+      "weighted_f1": 0.6538,
+      "roc_auc": 0.6919,
+      "cohen_kappa": 0.2951,
+      "confusion_matrix": [
+        [
+          817,
+          586
+        ],
+        [
+          520,
+          1281
+        ]
+      ]
+    },
+    "KNN (k=5)": {
+      "accuracy": 0.6642,
+      "precision": 0.6915,
+      "recall": 0.7268,
+      "f1_hit": 0.7087,
+      "weighted_f1": 0.6627,
+      "roc_auc": 0.7161,
+      "cohen_kappa": 0.3128,
+      "confusion_matrix": [
+        [
+          819,
+          584
+        ],
+        [
+          492,
+          1309
+        ]
+      ]
+    },
+    "KNN (k=7)": {
+      "accuracy": 0.6654,
+      "precision": 0.6948,
+      "recall": 0.7218,
+      "f1_hit": 0.7081,
+      "weighted_f1": 0.6643,
+      "roc_auc": 0.7263,
+      "cohen_kappa": 0.3166,
+      "confusion_matrix": [
+        [
+          832,
+          571
+        ],
+        [
+          501,
+          1300
+        ]
+      ]
+    },
+    "KNN (k=9)": {
+      "accuracy": 0.6748,
+      "precision": 0.7024,
+      "recall": 0.7313,
+      "f1_hit": 0.7165,
+      "weighted_f1": 0.6737,
+      "roc_auc": 0.7371,
+      "cohen_kappa": 0.3355,
+      "confusion_matrix": [
+        [
+          845,
+          558
+        ],
+        [
+          484,
+          1317
+        ]
+      ]
+    },
+    "KNN (k=11)": {
+      "accuracy": 0.687,
+      "precision": 0.7118,
+      "recall": 0.7446,
+      "f1_hit": 0.7278,
+      "weighted_f1": 0.6857,
+      "roc_auc": 0.7451,
+      "cohen_kappa": 0.3599,
+      "confusion_matrix": [
+        [
+          860,
+          543
+        ],
+        [
+          460,
+          1341
+        ]
+      ]
+    },
+    "KNN (k=15)": {
+      "accuracy": 0.6885,
+      "precision": 0.7101,
+      "recall": 0.7535,
+      "f1_hit": 0.7311,
+      "weighted_f1": 0.6868,
+      "roc_auc": 0.7526,
+      "cohen_kappa": 0.3617,
+      "confusion_matrix": [
+        [
+          849,
+          554
+        ],
+        [
+          444,
+          1357
+        ]
+      ]
+    },
+    "KNN (Best k)": {
+      "accuracy": 0.6885,
+      "precision": 0.7101,
+      "recall": 0.7535,
+      "f1_hit": 0.7311,
+      "weighted_f1": 0.6868,
+      "roc_auc": 0.7526,
+      "cohen_kappa": 0.3617,
+      "confusion_matrix": [
+        [
+          849,
+          554
+        ],
+        [
+          444,
+          1357
+        ]
+      ],
+      "best_k": 15
+    },
+    "Random Forest": {
+      "accuracy": 0.7519,
+      "precision": 0.7636,
+      "recall": 0.809,
+      "f1_hit": 0.7857,
+      "weighted_f1": 0.7505,
+      "roc_auc": 0.8302,
+      "cohen_kappa": 0.4917,
+      "confusion_matrix": [
+        [
+          952,
+          451
+        ],
+        [
+          344,
+          1457
+        ]
+      ],
+      "tuned_max_depth": null,
+      "depth_choices_per_fold": [
+        "12",
+        "12",
+        "None",
+        "None",
+        "None",
+        "8",
+        "12",
+        "None",
+        "None",
+        "12"
+      ]
+    }
+  }
+}

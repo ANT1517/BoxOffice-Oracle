@@ -1,0 +1,17 @@
+pandas
+numpy
+scikit-learn
+mlxtend
+scipy
+joblotlib
+fastapiib
+matpl
+uvicorn[standard]
+pydantic
+pytest
+httpx
+rapidfuzz
+openpyxl
+python-dotenv
+pyarrow
+d

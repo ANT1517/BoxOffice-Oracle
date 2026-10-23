@@ -1,0 +1,27 @@
+{
+  "total": 3204,
+  "binary": {
+    "Hit": {
+      "count": 1801,
+      "percentage": 56.21
+    },
+    "Flop": {
+      "count": 1403,
+      "percentage": 43.79
+    }
+  },
+  "three_class": {
+    "Hit": {
+      "count": 1508,
+      "percentage": 47.07
+    },
+    "Average": {
+      "count": 921,
+      "percentage": 28.75
+    },
+    "Flop": {
+      "count": 775,
+      "percentage": 24.19
+    }
+  }
+}

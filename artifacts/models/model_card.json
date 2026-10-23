@@ -1,0 +1,139 @@
+{
+  "model_name": "BoxOffice Oracle Dual Predictive Architecture",
+  "version": "1.0.0",
+  "training_date": "2026-10-23 08:39:47",
+  "training_rows": 3204,
+  "class_distribution": {
+    "Hit": 1801,
+    "Flop": 1403
+  },
+  "default_decision_threshold": 0.5,
+  "model_A": {
+    "algorithm": "Random Forest",
+    "architecture": "RandomForestClassifier(n_estimators=300, max_depth=8) + CalibratedClassifierCV(method='sigmoid', cv=5, ensemble=False)",
+    "inputs": [
+      "log_budget",
+      "runtime",
+      "n_genres",
+      "is_english",
+      "big_studio",
+      "franchise",
+      "release_month",
+      "holiday_flag",
+      "cast_avg_past_revenue",
+      "cast_past_hit_rate",
+      "cast_past_films",
+      "dir_avg_past_revenue",
+      "dir_past_hit_rate",
+      "dir_past_films",
+      "primary_genre",
+      "season"
+    ],
+    "cv_metrics": {
+      "accuracy": 0.6161,
+      "precision": 0.6396,
+      "recall": 0.7263,
+      "f1_hit": 0.6802,
+      "weighted_f1": 0.61,
+      "roc_auc": 0.6673,
+      "cohen_kappa": 0.2049,
+      "confusion_matrix": [
+        [
+          666,
+          737
+        ],
+        [
+          493,
+          1308
+        ]
+      ],
+      "tuned_max_depth": 8,
+      "depth_choices_per_fold": [
+        "12",
+        "8",
+        "8",
+        "12",
+        "8",
+        "8",
+        "12",
+        "8",
+        "8",
+        "8"
+      ]
+    },
+    "brier_score": 0.2235,
+    "calibration_evaluation": "out-of-fold (10-fold CV)"
+  },
+  "model_B": {
+    "algorithm": "Random Forest",
+    "architecture": "RandomForestClassifier(n_estimators=300, max_depth=None) + CalibratedClassifierCV(method='sigmoid', cv=5, ensemble=False)",
+    "inputs": [
+      "log_budget",
+      "runtime",
+      "n_genres",
+      "is_english",
+      "big_studio",
+      "franchise",
+      "release_month",
+      "holiday_flag",
+      "cast_avg_past_revenue",
+      "cast_past_hit_rate",
+      "cast_past_films",
+      "dir_avg_past_revenue",
+      "dir_past_hit_rate",
+      "dir_past_films",
+      "primary_genre",
+      "season",
+      "vote_average",
+      "vote_count",
+      "popularity"
+    ],
+    "cv_metrics": {
+      "accuracy": 0.7519,
+      "precision": 0.7636,
+      "recall": 0.809,
+      "f1_hit": 0.7857,
+      "weighted_f1": 0.7505,
+      "roc_auc": 0.8302,
+      "cohen_kappa": 0.4917,
+      "confusion_matrix": [
+        [
+          952,
+          451
+        ],
+        [
+          344,
+          1457
+        ]
+      ],
+      "tuned_max_depth": null,
+      "depth_choices_per_fold": [
+        "12",
+        "12",
+        "None",
+        "None",
+        "None",
+        "8",
+        "12",
+        "None",
+        "None",
+        "12"
+      ]
+    },
+    "brier_score": 0.166,
+    "calibration_evaluation": "out-of-fold (10-fold CV)"
+  },
+  "method_notes": {
+    "repeated_cv_protocol": "10x10 Repeated Stratified Cross-Validation (RepeatedStratifiedKFold, n_splits=10, n_repeats=10, random_state=1) resulting in 100 paired evaluation folds.",
+    "pairing_and_leakage": "Exact identical train/test splits evaluated simultaneously across all algorithms (ZeroR, ID3, CART, GaussianNB, CategoricalNB, KNN, RF) for both Model A and Model B. Preprocessing (OneHotEncoder, ColumnTransformer, Scaler, Quantile Discretizer) strictly encapsulated within Pipeline objects fitted solely on training splits.",
+    "hardware_optimization": "To eliminate Windows OpenMP/loky worker thread exhaustion during 200 sequential subprocess spawns, repeated-CV significance testing used n_estimators=100 and n_jobs=1 with cloned pipelines. The full dataset (3,204 films) and complete candidate grids were strictly maintained without any reduction.",
+    "calibration_protocol": "Calibrated with CalibratedClassifierCV(method='sigmoid', cv=5, ensemble=False). Brier scores and reliability curves evaluated strictly out-of-fold via 10-fold cross_val_predict."
+  },
+  "known_limitations": [
+    "Model A uses strictly pre-release signals; commercial success remains subject to unforeseen viral marketing, competitor release date clashes, and critical word-of-mouth.",
+    "vote_count and popularity are post-release engagement snapshots (2017) and partly proxy for audience size, so Model B is explanatory, not a pre-release forecast.",
+    "44.5% of movies have first-time or unknown directors in this historical dataset, defaulting director past revenue to 0.",
+    "Historical TMDb data reflects box office economics up through 2017 and may not capture post-2020 day-and-date streaming distribution shifts.",
+    "Franchise is defined per TMDb collection; shared universes (e.g. The Avengers 2012 after Iron Man) are not captured, so such films count as originals."
+  ]
+}

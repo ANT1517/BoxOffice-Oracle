@@ -1,0 +1,10 @@
+[load] movies=4803 credits=4803 merged=4803
+[clean] duplicates removed: 0
+[clean] not-released removed: 8
+[clean] missing release_date removed: 1
+[clean] invalid budget rows=1066, invalid revenue rows=1446, removed together: 1590  -> remaining 3204
+[clean] runtime missing/zero imputed with median: 0
+[target] Hit/Flop counts: {'Hit': 1801, 'Flop': 1403}
+[target] 3-class counts: {'Hit': 1508, 'Average': 921, 'Flop': 775}
+[franchise] non-leaking collection sequel flag computed from movies_metadata.csv (45433 rows, 1695 collections)
+[star] films with no cast history: 479, no director history: 1427

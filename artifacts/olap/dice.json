@@ -1,0 +1,283 @@
+{
+  "operation": "Dice",
+  "description": "Sub-cube selection filtering specific subsets of Genre, Season, and Budget tiers.",
+  "dice_result": {
+    "type": "2D_pivot",
+    "rows": [
+      "primary_genre",
+      "season"
+    ],
+    "cols": [
+      "budget_tier"
+    ],
+    "col_headers": [
+      "High",
+      "Low",
+      "_Total"
+    ],
+    "measures": [
+      "count",
+      "hit_rate",
+      "median_roi",
+      "avg_roi",
+      "median_budget"
+    ],
+    "filters": {
+      "primary_genre": [
+        "Action",
+        "Horror",
+        "Comedy"
+      ],
+      "season": [
+        "Summer",
+        "Holiday"
+      ],
+      "budget_tier": [
+        "Low",
+        "High"
+      ]
+    },
+    "total_movies": 394,
+    "matrix": [
+      {
+        "row": {
+          "primary_genre": "Action",
+          "season": "Holiday"
+        },
+        "values": {
+          "High": {
+            "count": 37,
+            "low_confidence": false,
+            "small_sample": false,
+            "hit_rate": 0.5135,
+            "median_roi": 2.04,
+            "avg_roi": 2.73,
+            "median_budget": 75000000.0
+          },
+          "Low": {
+            "count": 13,
+            "low_confidence": false,
+            "small_sample": true,
+            "hit_rate": 0.4615,
+            "median_roi": 1.5,
+            "avg_roi": 3.99,
+            "median_budget": 8000000.0
+          },
+          "_Total": {
+            "count": 50,
+            "low_confidence": false,
+            "small_sample": false,
+            "hit_rate": 0.5,
+            "median_roi": 2.01,
+            "avg_roi": 3.06,
+            "median_budget": 60000000.0
+          }
+        }
+      },
+      {
+        "row": {
+          "primary_genre": "Action",
+          "season": "Summer"
+        },
+        "values": {
+          "High": {
+            "count": 117,
+            "low_confidence": false,
+            "small_sample": false,
+            "hit_rate": 0.6581,
+            "median_roi": 2.53,
+            "avg_roi": 2.71,
+            "median_budget": 100000000.0
+          },
+          "Low": {
+            "count": 25,
+            "low_confidence": false,
+            "small_sample": true,
+            "hit_rate": 0.56,
+            "median_roi": 2.12,
+            "avg_roi": 4.19,
+            "median_budget": 8000000.0
+          },
+          "_Total": {
+            "count": 142,
+            "low_confidence": false,
+            "small_sample": false,
+            "hit_rate": 0.6408,
+            "median_roi": 2.48,
+            "avg_roi": 2.97,
+            "median_budget": 82500000.0
+          }
+        }
+      },
+      {
+        "row": {
+          "primary_genre": "Comedy",
+          "season": "Holiday"
+        },
+        "values": {
+          "High": {
+            "count": 45,
+            "low_confidence": false,
+            "small_sample": false,
+            "hit_rate": 0.6889,
+            "median_roi": 2.52,
+            "avg_roi": 2.84,
+            "median_budget": 65000000.0
+          },
+          "Low": {
+            "count": 26,
+            "low_confidence": false,
+            "small_sample": true,
+            "hit_rate": 0.6538,
+            "median_roi": 4.2,
+            "avg_roi": 9.45,
+            "median_budget": 6750000.0
+          },
+          "_Total": {
+            "count": 71,
+            "low_confidence": false,
+            "small_sample": false,
+            "hit_rate": 0.6761,
+            "median_roi": 2.58,
+            "avg_roi": 5.26,
+            "median_budget": 50000000.0
+          }
+        }
+      },
+      {
+        "row": {
+          "primary_genre": "Comedy",
+          "season": "Summer"
+        },
+        "values": {
+          "High": {
+            "count": 45,
+            "low_confidence": false,
+            "small_sample": false,
+            "hit_rate": 0.6667,
+            "median_roi": 2.74,
+            "avg_roi": 3.03,
+            "median_budget": 63000000.0
+          },
+          "Low": {
+            "count": 46,
+            "low_confidence": false,
+            "small_sample": false,
+            "hit_rate": 0.7174,
+            "median_roi": 5.19,
+            "avg_roi": 15.35,
+            "median_budget": 4800000.0
+          },
+          "_Total": {
+            "count": 91,
+            "low_confidence": false,
+            "small_sample": false,
+            "hit_rate": 0.6923,
+            "median_roi": 2.92,
+            "avg_roi": 9.26,
+            "median_budget": 15000000.0
+          }
+        }
+      },
+      {
+        "row": {
+          "primary_genre": "Horror",
+          "season": "Holiday"
+        },
+        "values": {
+          "High": {
+            "count": 2,
+            "low_confidence": true,
+            "small_sample": true,
+            "hit_rate": 0.5,
+            "median_roi": 2.17,
+            "avg_roi": 2.17,
+            "median_budget": 62500000.0
+          },
+          "Low": {
+            "count": 7,
+            "low_confidence": true,
+            "small_sample": true,
+            "hit_rate": 0.7143,
+            "median_roi": 2.63,
+            "avg_roi": 3.84,
+            "median_budget": 8000000.0
+          },
+          "_Total": {
+            "count": 9,
+            "low_confidence": true,
+            "small_sample": true,
+            "hit_rate": 0.6667,
+            "median_roi": 2.63,
+            "avg_roi": 3.47,
+            "median_budget": 9000000.0
+          }
+        }
+      },
+      {
+        "row": {
+          "primary_genre": "Horror",
+          "season": "Summer"
+        },
+        "values": {
+          "High": {
+            "count": 1,
+            "low_confidence": true,
+            "small_sample": true,
+            "hit_rate": 0.0,
+            "median_roi": 1.14,
+            "avg_roi": 1.14,
+            "median_budget": 80000000.0
+          },
+          "Low": {
+            "count": 30,
+            "low_confidence": false,
+            "small_sample": false,
+            "hit_rate": 0.8333,
+            "median_roi": 5.52,
+            "avg_roi": 160.45,
+            "median_budget": 7750000.0
+          },
+          "_Total": {
+            "count": 31,
+            "low_confidence": false,
+            "small_sample": false,
+            "hit_rate": 0.8065,
+            "median_roi": 5.11,
+            "avg_roi": 155.31,
+            "median_budget": 8500000.0
+          }
+        }
+      }
+    ],
+    "totals": {
+      "High": {
+        "count": 247,
+        "low_confidence": false,
+        "small_sample": false,
+        "hit_rate": 0.6397,
+        "median_roi": 2.52,
+        "avg_roi": 2.78,
+        "median_budget": 75000000.0
+      },
+      "Low": {
+        "count": 147,
+        "low_confidence": false,
+        "small_sample": false,
+        "hit_rate": 0.6803,
+        "median_roi": 3.79,
+        "avg_roi": 40.47,
+        "median_budget": 6000000.0
+      },
+      "_Total": {
+        "count": 394,
+        "low_confidence": false,
+        "small_sample": false,
+        "hit_rate": 0.6548,
+        "median_roi": 2.7,
+        "avg_roi": 16.84,
+        "median_budget": 55000000.0
+      }
+    }
+  }
+}

@@ -1,0 +1,311 @@
+{
+  "node_id": 0,
+  "is_leaf": false,
+  "feature": "num__franchise",
+  "threshold": 0.5,
+  "samples": 3204,
+  "class": "Hit",
+  "hit_probability": 0.5621,
+  "left": {
+    "node_id": 1,
+    "is_leaf": false,
+    "feature": "num__log_budget",
+    "threshold": 6.6946,
+    "samples": 2701,
+    "class": "Hit",
+    "hit_probability": 0.5265,
+    "left": {
+      "node_id": 2,
+      "is_leaf": false,
+      "feature": "num__big_studio",
+      "threshold": 0.5,
+      "samples": 380,
+      "class": "Hit",
+      "hit_probability": 0.7079,
+      "left": {
+        "node_id": 3,
+        "is_leaf": false,
+        "feature": "num__log_budget",
+        "threshold": 5.6761,
+        "samples": 297,
+        "class": "Hit",
+        "hit_probability": 0.6532,
+        "left": {
+          "node_id": 4,
+          "is_leaf": true,
+          "samples": 46,
+          "class": "Hit",
+          "hit_probability": 0.8913,
+          "counts": {
+            "Flop": 0,
+            "Hit": 0
+          }
+        },
+        "right": {
+          "node_id": 5,
+          "is_leaf": true,
+          "samples": 251,
+          "class": "Hit",
+          "hit_probability": 0.6096,
+          "counts": {
+            "Flop": 0,
+            "Hit": 0
+          }
+        }
+      },
+      "right": {
+        "node_id": 6,
+        "is_leaf": false,
+        "feature": "num__log_budget",
+        "threshold": 6.3068,
+        "samples": 83,
+        "class": "Hit",
+        "hit_probability": 0.9036,
+        "left": {
+          "node_id": 7,
+          "is_leaf": true,
+          "samples": 33,
+          "class": "Hit",
+          "hit_probability": 1.0,
+          "counts": {
+            "Flop": 0,
+            "Hit": 1
+          }
+        },
+        "right": {
+          "node_id": 8,
+          "is_leaf": true,
+          "samples": 50,
+          "class": "Hit",
+          "hit_probability": 0.84,
+          "counts": {
+            "Flop": 0,
+            "Hit": 0
+          }
+        }
+      }
+    },
+    "right": {
+      "node_id": 9,
+      "is_leaf": false,
+      "feature": "num__big_studio",
+      "threshold": 0.5,
+      "samples": 2321,
+      "class": "Flop",
+      "hit_probability": 0.4968,
+      "left": {
+        "node_id": 10,
+        "is_leaf": false,
+        "feature": "cat__primary_genre_Horror",
+        "threshold": 0.5,
+        "samples": 1131,
+        "class": "Flop",
+        "hit_probability": 0.4403,
+        "left": {
+          "node_id": 11,
+          "is_leaf": true,
+          "samples": 1089,
+          "class": "Flop",
+          "hit_probability": 0.4288,
+          "counts": {
+            "Flop": 0,
+            "Hit": 0
+          }
+        },
+        "right": {
+          "node_id": 12,
+          "is_leaf": true,
+          "samples": 42,
+          "class": "Hit",
+          "hit_probability": 0.7381,
+          "counts": {
+            "Flop": 0,
+            "Hit": 0
+          }
+        }
+      },
+      "right": {
+        "node_id": 13,
+        "is_leaf": false,
+        "feature": "num__log_budget",
+        "threshold": 7.0934,
+        "samples": 1190,
+        "class": "Hit",
+        "hit_probability": 0.5504,
+        "left": {
+          "node_id": 14,
+          "is_leaf": true,
+          "samples": 119,
+          "class": "Hit",
+          "hit_probability": 0.7647,
+          "counts": {
+            "Flop": 0,
+            "Hit": 0
+          }
+        },
+        "right": {
+          "node_id": 15,
+          "is_leaf": true,
+          "samples": 1071,
+          "class": "Hit",
+          "hit_probability": 0.5266,
+          "counts": {
+            "Flop": 0,
+            "Hit": 0
+          }
+        }
+      }
+    }
+  },
+  "right": {
+    "node_id": 16,
+    "is_leaf": false,
+    "feature": "num__runtime",
+    "threshold": 123.5,
+    "samples": 503,
+    "class": "Hit",
+    "hit_probability": 0.7535,
+    "left": {
+      "node_id": 17,
+      "is_leaf": false,
+      "feature": "num__runtime",
+      "threshold": 95.5,
+      "samples": 391,
+      "class": "Hit",
+      "hit_probability": 0.7033,
+      "left": {
+        "node_id": 18,
+        "is_leaf": false,
+        "feature": "num__cast_past_films",
+        "threshold": 15.5,
+        "samples": 139,
+        "class": "Hit",
+        "hit_probability": 0.8201,
+        "left": {
+          "node_id": 19,
+          "is_leaf": true,
+          "samples": 121,
+          "class": "Hit",
+          "hit_probability": 0.7934,
+          "counts": {
+            "Flop": 0,
+            "Hit": 0
+          }
+        },
+        "right": {
+          "node_id": 20,
+          "is_leaf": true,
+          "samples": 18,
+          "class": "Hit",
+          "hit_probability": 1.0,
+          "counts": {
+            "Flop": 0,
+            "Hit": 1
+          }
+        }
+      },
+      "right": {
+        "node_id": 21,
+        "is_leaf": false,
+        "feature": "num__cast_past_hit_rate",
+        "threshold": 0.6196,
+        "samples": 252,
+        "class": "Hit",
+        "hit_probability": 0.6389,
+        "left": {
+          "node_id": 22,
+          "is_leaf": true,
+          "samples": 134,
+          "class": "Hit",
+          "hit_probability": 0.5448,
+          "counts": {
+            "Flop": 0,
+            "Hit": 0
+          }
+        },
+        "right": {
+          "node_id": 23,
+          "is_leaf": true,
+          "samples": 118,
+          "class": "Hit",
+          "hit_probability": 0.7458,
+          "counts": {
+            "Flop": 0,
+            "Hit": 0
+          }
+        }
+      }
+    },
+    "right": {
+      "node_id": 24,
+      "is_leaf": false,
+      "feature": "num__is_english",
+      "threshold": 0.5,
+      "samples": 112,
+      "class": "Hit",
+      "hit_probability": 0.9286,
+      "left": {
+        "node_id": 25,
+        "is_leaf": false,
+        "feature": "num__release_month",
+        "threshold": 8.5,
+        "samples": 3,
+        "class": "Flop",
+        "hit_probability": 0.3333,
+        "left": {
+          "node_id": 26,
+          "is_leaf": true,
+          "samples": 2,
+          "class": "Flop",
+          "hit_probability": 0.0,
+          "counts": {
+            "Flop": 1,
+            "Hit": 0
+          }
+        },
+        "right": {
+          "node_id": 27,
+          "is_leaf": true,
+          "samples": 1,
+          "class": "Hit",
+          "hit_probability": 1.0,
+          "counts": {
+            "Flop": 0,
+            "Hit": 1
+          }
+        }
+      },
+      "right": {
+        "node_id": 28,
+        "is_leaf": false,
+        "feature": "num__dir_past_hit_rate",
+        "threshold": 0.9583,
+        "samples": 109,
+        "class": "Hit",
+        "hit_probability": 0.945,
+        "left": {
+          "node_id": 29,
+          "is_leaf": true,
+          "samples": 64,
+          "class": "Hit",
+          "hit_probability": 0.9844,
+          "counts": {
+            "Flop": 0,
+            "Hit": 0
+          }
+        },
+        "right": {
+          "node_id": 30,
+          "is_leaf": true,
+          "samples": 45,
+          "class": "Hit",
+          "hit_probability": 0.8889,
+          "counts": {
+            "Flop": 0,
+            "Hit": 0
+          }
+        }
+      }
+    }
+  }
+}

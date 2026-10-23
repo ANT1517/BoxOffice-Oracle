@@ -1,0 +1,102 @@
+{
+  "dataset_rows": 3204,
+  "onehot_columns": 49,
+  "explanation": "FP-Growth beats Apriori when min_support is low or itemsets are long/dense, because Apriori suffers from candidate generation explosion (generating and checking O(2^k) candidates across repeated dataset scans), whereas FP-Growth compresses transactions into a prefix tree and mines patterns recursively via conditional FP-trees without candidate generation.",
+  "benchmark_min_support_0_03": {
+    "min_support": 0.03,
+    "min_confidence": 0.65,
+    "num_runs": 3,
+    "algorithms": {
+      "apriori": {
+        "avg_time_seconds": 0.1995,
+        "times_seconds": [
+          0.1741,
+          0.1515,
+          0.273
+        ],
+        "frequent_itemsets": 5186,
+        "total_rules": 4572,
+        "class_association_rules": 574
+      },
+      "fpgrowth": {
+        "avg_time_seconds": 0.3628,
+        "times_seconds": [
+          0.3292,
+          0.338,
+          0.4211
+        ],
+        "frequent_itemsets": 5186,
+        "total_rules": 4572,
+        "class_association_rules": 574
+      }
+    },
+    "verification": {
+      "identical_rule_sets": true,
+      "discrepancy_count": 0
+    }
+  },
+  "benchmark_min_support_0_01": {
+    "min_support": 0.01,
+    "min_confidence": 0.65,
+    "num_runs": 3,
+    "algorithms": {
+      "apriori": {
+        "avg_time_seconds": 1.4444,
+        "times_seconds": [
+          1.4314,
+          1.5822,
+          1.3198
+        ],
+        "frequent_itemsets": 27883,
+        "total_rules": 33748,
+        "class_association_rules": 4610
+      },
+      "fpgrowth": {
+        "avg_time_seconds": 1.0504,
+        "times_seconds": [
+          0.984,
+          1.1069,
+          1.0603
+        ],
+        "frequent_itemsets": 27883,
+        "total_rules": 33748,
+        "class_association_rules": 4610
+      }
+    },
+    "verification": {
+      "identical_rule_sets": true,
+      "discrepancy_count": 0
+    }
+  },
+  "min_support": 0.03,
+  "min_confidence": 0.65,
+  "num_runs": 3,
+  "algorithms": {
+    "apriori": {
+      "avg_time_seconds": 0.1995,
+      "times_seconds": [
+        0.1741,
+        0.1515,
+        0.273
+      ],
+      "frequent_itemsets": 5186,
+      "total_rules": 4572,
+      "class_association_rules": 574
+    },
+    "fpgrowth": {
+      "avg_time_seconds": 0.3628,
+      "times_seconds": [
+        0.3292,
+        0.338,
+        0.4211
+      ],
+      "frequent_itemsets": 5186,
+      "total_rules": 4572,
+      "class_association_rules": 574
+    }
+  },
+  "verification": {
+    "identical_rule_sets": true,
+    "discrepancy_count": 0
+  }
+}

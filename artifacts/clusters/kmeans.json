@@ -1,0 +1,168 @@
+{
+  "chosen_k": 3,
+  "features": [
+    "log_budget",
+    "runtime",
+    "cast_avg_past_revenue",
+    "dir_avg_past_revenue",
+    "vote_average",
+    "vote_count",
+    "popularity"
+  ],
+  "structure_note": "Silhouette scores across all evaluated k values are low (0.16\u20130.32), indicating weak/overlapping cluster structure. While k=2 attains the highest silhouette coefficient (0.3229) by splitting purely on high/low engagement, k=3 was chosen for industry interpretability and actionable studio segmentation.",
+  "k_sweep": [
+    {
+      "k": 2,
+      "inertia": 17444.95,
+      "silhouette": 0.3229
+    },
+    {
+      "k": 3,
+      "inertia": 14993.44,
+      "silhouette": 0.1939
+    },
+    {
+      "k": 4,
+      "inertia": 13363.78,
+      "silhouette": 0.1807
+    },
+    {
+      "k": 5,
+      "inertia": 12146.5,
+      "silhouette": 0.1928
+    },
+    {
+      "k": 6,
+      "inertia": 11116.57,
+      "silhouette": 0.1908
+    },
+    {
+      "k": 7,
+      "inertia": 10215.89,
+      "silhouette": 0.1763
+    },
+    {
+      "k": 8,
+      "inertia": 9626.62,
+      "silhouette": 0.1775
+    }
+  ],
+  "overall_baseline": {
+    "log_budget": 7.324414289452491,
+    "runtime": 110.82802746566792,
+    "cast_avg_past_revenue": 109735478.58114517,
+    "dir_avg_past_revenue": 71553114.37230702,
+    "vote_average": 6.311079900124844,
+    "vote_count": 983.8751560549314,
+    "popularity": 29.211888876092384,
+    "budget": 40939789.81491885,
+    "revenue": 122182298.38795257,
+    "roi_ratio": 11.12797497824328,
+    "median_roi": 2.305641265909091,
+    "hit_rate": 0.5621098626716604
+  },
+  "clusters": [
+    {
+      "cluster_id": 0,
+      "name": "High-Budget, High-Engagement Blockbusters",
+      "size": 458,
+      "size_percentage": 14.29,
+      "hits": 382,
+      "flops": 76,
+      "hit_share": 0.8341,
+      "median_roi": 3.75,
+      "avg_roi": 5.38,
+      "centroid_original": {
+        "log_budget": 7.8724,
+        "runtime": 126.9956,
+        "cast_avg_past_revenue": 176830164.9816,
+        "dir_avg_past_revenue": 223740627.5694,
+        "vote_average": 6.9557,
+        "vote_count": 3505.607,
+        "popularity": 78.0467,
+        "avg_budget": 98728275.12,
+        "median_budget": 90000000.0,
+        "avg_revenue": 403940791.59,
+        "avg_roi": 5.38,
+        "median_roi": 3.75
+      },
+      "centroid_standardized": {
+        "log_budget": 0.9075,
+        "runtime": 0.7719,
+        "cast_avg_past_revenue": 0.702,
+        "dir_avg_past_revenue": 1.2925,
+        "vote_average": 0.7446,
+        "vote_count": 1.779,
+        "popularity": 1.3476
+      }
+    },
+    {
+      "cluster_id": 1,
+      "name": "Mid-to-High Budget Mainstream / Risky Studio Releases",
+      "size": 1704,
+      "size_percentage": 53.18,
+      "hits": 755,
+      "flops": 949,
+      "hit_share": 0.4431,
+      "median_roi": 1.75,
+      "avg_roi": 2.45,
+      "centroid_original": {
+        "log_budget": 7.5275,
+        "runtime": 105.5399,
+        "cast_avg_past_revenue": 132226080.344,
+        "dir_avg_past_revenue": 63975921.7287,
+        "vote_average": 5.8475,
+        "vote_count": 586.7905,
+        "popularity": 22.1555,
+        "avg_budget": 43885926.43,
+        "median_budget": 35000000.0,
+        "avg_revenue": 93564576.54,
+        "avg_roi": 2.45,
+        "median_roi": 1.75
+      },
+      "centroid_standardized": {
+        "log_budget": 0.3363,
+        "runtime": -0.2525,
+        "cast_avg_past_revenue": 0.2353,
+        "dir_avg_past_revenue": -0.0643,
+        "vote_average": -0.5356,
+        "vote_count": -0.2801,
+        "popularity": -0.1947
+      }
+    },
+    {
+      "cluster_id": 2,
+      "name": "Low-Budget Indie / Sleeper Releases",
+      "size": 1042,
+      "size_percentage": 32.52,
+      "hits": 664,
+      "flops": 378,
+      "hit_share": 0.6372,
+      "median_roi": 3.24,
+      "avg_roi": 27.85,
+      "centroid_original": {
+        "log_budget": 6.7515,
+        "runtime": 112.3695,
+        "cast_avg_past_revenue": 43465467.2805,
+        "dir_avg_past_revenue": 17051823.7969,
+        "vote_average": 6.7859,
+        "vote_count": 524.834,
+        "popularity": 19.2865,
+        "avg_budget": 10721610.3,
+        "median_budget": 7000000.0,
+        "avg_revenue": 45137392.58,
+        "avg_roi": 27.85,
+        "median_roi": 3.24
+      },
+      "centroid_standardized": {
+        "log_budget": -0.9488,
+        "runtime": 0.0736,
+        "cast_avg_past_revenue": -0.6934,
+        "dir_avg_past_revenue": -0.4629,
+        "vote_average": 0.5485,
+        "vote_count": -0.3238,
+        "popularity": -0.2739
+      }
+    }
+  ]
+}

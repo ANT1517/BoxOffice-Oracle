@@ -1,0 +1,421 @@
+{
+  "operation": "Slice",
+  "description": "Fixing the Genre dimension to 'Action', analyzing budget_tier across decades.",
+  "slice_action": {
+    "type": "2D_pivot",
+    "rows": [
+      "budget_tier"
+    ],
+    "cols": [
+      "decade"
+    ],
+    "col_headers": [
+      "1930s",
+      "1940s",
+      "1950s",
+      "1960s",
+      "1970s",
+      "1980s",
+      "1990s",
+      "2000s",
+      "2010s",
+      "_Total"
+    ],
+    "measures": [
+      "count",
+      "hit_rate",
+      "median_roi",
+      "avg_roi",
+      "median_budget"
+    ],
+    "filters": {
+      "primary_genre": "Action"
+    },
+    "total_movies": 588,
+    "matrix": [
+      {
+        "row": {
+          "budget_tier": "High"
+        },
+        "values": {
+          "1930s": {
+            "count": 0,
+            "low_confidence": true,
+            "small_sample": true,
+            "hit_rate": 0.0,
+            "median_roi": 0.0,
+            "avg_roi": 0.0,
+            "median_budget": 0.0
+          },
+          "1940s": {
+            "count": 0,
+            "low_confidence": true,
+            "small_sample": true,
+            "hit_rate": 0.0,
+            "median_roi": 0.0,
+            "avg_roi": 0.0,
+            "median_budget": 0.0
+          },
+          "1950s": {
+            "count": 0,
+            "low_confidence": true,
+            "small_sample": true,
+            "hit_rate": 0.0,
+            "median_roi": 0.0,
+            "avg_roi": 0.0,
+            "median_budget": 0.0
+          },
+          "1960s": {
+            "count": 0,
+            "low_confidence": true,
+            "small_sample": true,
+            "hit_rate": 0.0,
+            "median_roi": 0.0,
+            "avg_roi": 0.0,
+            "median_budget": 0.0
+          },
+          "1970s": {
+            "count": 1,
+            "low_confidence": true,
+            "small_sample": true,
+            "hit_rate": 1.0,
+            "median_roi": 5.46,
+            "avg_roi": 5.46,
+            "median_budget": 55000000.0
+          },
+          "1980s": {
+            "count": 6,
+            "low_confidence": true,
+            "small_sample": true,
+            "hit_rate": 0.5,
+            "median_roi": 2.08,
+            "avg_roi": 2.47,
+            "median_budget": 54500000.0
+          },
+          "1990s": {
+            "count": 65,
+            "low_confidence": false,
+            "small_sample": false,
+            "hit_rate": 0.5385,
+            "median_roi": 2.22,
+            "avg_roi": 2.41,
+            "median_budget": 70000000.0
+          },
+          "2000s": {
+            "count": 116,
+            "low_confidence": false,
+            "small_sample": false,
+            "hit_rate": 0.3966,
+            "median_roi": 1.6,
+            "avg_roi": 2.04,
+            "median_budget": 70000000.0
+          },
+          "2010s": {
+            "count": 114,
+            "low_confidence": false,
+            "small_sample": false,
+            "hit_rate": 0.6579,
+            "median_roi": 2.49,
+            "avg_roi": 2.87,
+            "median_budget": 110000000.0
+          },
+          "_Total": {
+            "count": 302,
+            "low_confidence": false,
+            "small_sample": false,
+            "hit_rate": 0.5298,
+            "median_roi": 2.1,
+            "avg_roi": 2.46,
+            "median_budget": 75000000.0
+          }
+        }
+      },
+      {
+        "row": {
+          "budget_tier": "Low"
+        },
+        "values": {
+          "1930s": {
+            "count": 2,
+            "low_confidence": true,
+            "small_sample": true,
+            "hit_rate": 1.0,
+            "median_roi": 2.15,
+            "avg_roi": 2.15,
+            "median_budget": 2575000.0
+          },
+          "1940s": {
+            "count": 1,
+            "low_confidence": true,
+            "small_sample": true,
+            "hit_rate": 1.0,
+            "median_roi": 7.8,
+            "avg_roi": 7.8,
+            "median_budget": 1000000.0
+          },
+          "1950s": {
+            "count": 3,
+            "low_confidence": true,
+            "small_sample": true,
+            "hit_rate": 0.6667,
+            "median_roi": 2.12,
+            "avg_roi": 3.75,
+            "median_budget": 3768785.0
+          },
+          "1960s": {
+            "count": 9,
+            "low_confidence": true,
+            "small_sample": true,
+            "hit_rate": 0.6667,
+            "median_roi": 4.0,
+            "avg_roi": 8.22,
+            "median_budget": 4000000.0
+          },
+          "1970s": {
+            "count": 8,
+            "low_confidence": true,
+            "small_sample": true,
+            "hit_rate": 0.75,
+            "median_roi": 5.45,
+            "avg_roi": 21.19,
+            "median_budget": 1750000.0
+          },
+          "1980s": {
+            "count": 19,
+            "low_confidence": false,
+            "small_sample": true,
+            "hit_rate": 0.9474,
+            "median_roi": 5.75,
+            "avg_roi": 7.03,
+            "median_budget": 10000000.0
+          },
+          "1990s": {
+            "count": 20,
+            "low_confidence": false,
+            "small_sample": true,
+            "hit_rate": 0.35,
+            "median_roi": 0.69,
+            "avg_roi": 1.72,
+            "median_budget": 8000000.0
+          },
+          "2000s": {
+            "count": 25,
+            "low_confidence": false,
+            "small_sample": true,
+            "hit_rate": 0.32,
+            "median_roi": 1.5,
+            "avg_roi": 1.84,
+            "median_budget": 8500000.0
+          },
+          "2010s": {
+            "count": 17,
+            "low_confidence": false,
+            "small_sample": true,
+            "hit_rate": 0.4706,
+            "median_roi": 1.69,
+            "avg_roi": 4.3,
+            "median_budget": 6000000.0
+          },
+          "_Total": {
+            "count": 104,
+            "low_confidence": false,
+            "small_sample": false,
+            "hit_rate": 0.5577,
+            "median_roi": 2.21,
+            "avg_roi": 5.33,
+            "median_budget": 6450000.0
+          }
+        }
+      },
+      {
+        "row": {
+          "budget_tier": "Medium"
+        },
+        "values": {
+          "1930s": {
+            "count": 0,
+            "low_confidence": true,
+            "small_sample": true,
+            "hit_rate": 0.0,
+            "median_roi": 0.0,
+            "avg_roi": 0.0,
+            "median_budget": 0.0
+          },
+          "1940s": {
+            "count": 0,
+            "low_confidence": true,
+            "small_sample": true,
+            "hit_rate": 0.0,
+            "median_roi": 0.0,
+            "avg_roi": 0.0,
+            "median_budget": 0.0
+          },
+          "1950s": {
+            "count": 0,
+            "low_confidence": true,
+            "small_sample": true,
+            "hit_rate": 0.0,
+            "median_roi": 0.0,
+            "avg_roi": 0.0,
+            "median_budget": 0.0
+          },
+          "1960s": {
+            "count": 1,
+            "low_confidence": true,
+            "small_sample": true,
+            "hit_rate": 0.0,
+            "median_roi": 0.59,
+            "avg_roi": 0.59,
+            "median_budget": 17000000.0
+          },
+          "1970s": {
+            "count": 4,
+            "low_confidence": true,
+            "small_sample": true,
+            "hit_rate": 0.25,
+            "median_roi": 0.73,
+            "avg_roi": 2.04,
+            "median_budget": 28000000.0
+          },
+          "1980s": {
+            "count": 13,
+            "low_confidence": false,
+            "small_sample": true,
+            "hit_rate": 0.3846,
+            "median_roi": 1.41,
+            "avg_roi": 2.82,
+            "median_budget": 25000000.0
+          },
+          "1990s": {
+            "count": 24,
+            "low_confidence": false,
+            "small_sample": true,
+            "hit_rate": 0.375,
+            "median_roi": 1.28,
+            "avg_roi": 2.3,
+            "median_budget": 28000000.0
+          },
+          "2000s": {
+            "count": 83,
+            "low_confidence": false,
+            "small_sample": false,
+            "hit_rate": 0.3976,
+            "median_roi": 1.51,
+            "avg_roi": 2.05,
+            "median_budget": 26000000.0
+          },
+          "2010s": {
+            "count": 57,
+            "low_confidence": false,
+            "small_sample": false,
+            "hit_rate": 0.4561,
+            "median_roi": 1.85,
+            "avg_roi": 2.18,
+            "median_budget": 30000000.0
+          },
+          "_Total": {
+            "count": 182,
+            "low_confidence": false,
+            "small_sample": false,
+            "hit_rate": 0.4066,
+            "median_roi": 1.55,
+            "avg_roi": 2.17,
+            "median_budget": 28000000.0
+          }
+        }
+      }
+    ],
+    "totals": {
+      "1930s": {
+        "count": 2,
+        "low_confidence": true,
+        "small_sample": true,
+        "hit_rate": 1.0,
+        "median_roi": 2.15,
+        "avg_roi": 2.15,
+        "median_budget": 2575000.0
+      },
+      "1940s": {
+        "count": 1,
+        "low_confidence": true,
+        "small_sample": true,
+        "hit_rate": 1.0,
+        "median_roi": 7.8,
+        "avg_roi": 7.8,
+        "median_budget": 1000000.0
+      },
+      "1950s": {
+        "count": 3,
+        "low_confidence": true,
+        "small_sample": true,
+        "hit_rate": 0.6667,
+        "median_roi": 2.12,
+        "avg_roi": 3.75,
+        "median_budget": 3768785.0
+      },
+      "1960s": {
+        "count": 10,
+        "low_confidence": false,
+        "small_sample": true,
+        "hit_rate": 0.6,
+        "median_roi": 3.71,
+        "avg_roi": 7.46,
+        "median_budget": 4900000.0
+      },
+      "1970s": {
+        "count": 13,
+        "low_confidence": false,
+        "small_sample": true,
+        "hit_rate": 0.6154,
+        "median_roi": 5.2,
+        "avg_roi": 14.09,
+        "median_budget": 3716946.0
+      },
+      "1980s": {
+        "count": 38,
+        "low_confidence": false,
+        "small_sample": false,
+        "hit_rate": 0.6842,
+        "median_roi": 2.97,
+        "avg_roi": 4.87,
+        "median_budget": 16000000.0
+      },
+      "1990s": {
+        "count": 109,
+        "low_confidence": false,
+        "small_sample": false,
+        "hit_rate": 0.4679,
+        "median_roi": 1.87,
+        "avg_roi": 2.26,
+        "median_budget": 50000000.0
+      },
+      "2000s": {
+        "count": 224,
+        "low_confidence": false,
+        "small_sample": false,
+        "hit_rate": 0.3884,
+        "median_roi": 1.58,
+        "avg_roi": 2.02,
+        "median_budget": 45000000.0
+      },
+      "2010s": {
+        "count": 188,
+        "low_confidence": false,
+        "small_sample": false,
+        "hit_rate": 0.5798,
+        "median_roi": 2.3,
+        "avg_roi": 2.79,
+        "median_budget": 57500000.0
+      },
+      "_Total": {
+        "count": 588,
+        "low_confidence": false,
+        "small_sample": false,
+        "hit_rate": 0.4966,
+        "median_roi": 1.98,
+        "avg_roi": 2.88,
+        "median_budget": 44000000.0
+      }
+    }
+  }
+}

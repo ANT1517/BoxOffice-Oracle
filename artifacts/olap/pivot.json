@@ -1,0 +1,1750 @@
+{
+  "operation": "Pivot",
+  "description": "Rotation of data cube axes: Genre x Budget Tier swapped to Budget Tier x Genre.",
+  "normal_genre_by_budget": {
+    "type": "2D_pivot",
+    "rows": [
+      "primary_genre"
+    ],
+    "cols": [
+      "budget_tier"
+    ],
+    "col_headers": [
+      "High",
+      "Low",
+      "Medium",
+      "_Total"
+    ],
+    "measures": [
+      "count",
+      "hit_rate",
+      "median_roi",
+      "avg_roi",
+      "median_budget"
+    ],
+    "filters": {},
+    "total_movies": 3204,
+    "matrix": [
+      {
+        "row": {
+          "primary_genre": "Action"
+        },
+        "values": {
+          "High": {
+            "count": 302,
+            "low_confidence": false,
+            "small_sample": false,
+            "hit_rate": 0.5298,
+            "median_roi": 2.1,
+            "avg_roi": 2.46,
+            "median_budget": 75000000.0
+          },
+          "Low": {
+            "count": 104,
+            "low_confidence": false,
+            "small_sample": false,
+            "hit_rate": 0.5577,
+            "median_roi": 2.21,
+            "avg_roi": 5.33,
+            "median_budget": 6450000.0
+          },
+          "Medium": {
+            "count": 182,
+            "low_confidence": false,
+            "small_sample": false,
+            "hit_rate": 0.4066,
+            "median_roi": 1.55,
+            "avg_roi": 2.17,
+            "median_budget": 28000000.0
+          },
+          "_Total": {
+            "count": 588,
+            "low_confidence": false,
+            "small_sample": false,
+            "hit_rate": 0.4966,
+            "median_roi": 1.98,
+            "avg_roi": 2.88,
+            "median_budget": 44000000.0
+          }
+        }
+      },
+      {
+        "row": {
+          "primary_genre": "Adventure"
+        },
+        "values": {
+          "High": {
+            "count": 171,
+            "low_confidence": false,
+            "small_sample": false,
+            "hit_rate": 0.6023,
+            "median_roi": 2.39,
+            "avg_roi": 3.11,
+            "median_budget": 100000000.0
+          },
+          "Low": {
+            "count": 41,
+            "low_confidence": false,
+            "small_sample": false,
+            "hit_rate": 0.7561,
+            "median_roi": 5.64,
+            "avg_roi": 19.16,
+            "median_budget": 6500000.0
+          },
+          "Medium": {
+            "count": 75,
+            "low_confidence": false,
+            "small_sample": false,
+            "hit_rate": 0.5333,
+            "median_roi": 2.2,
+            "avg_roi": 4.32,
+            "median_budget": 27000000.0
+          },
+          "_Total": {
+            "count": 287,
+            "low_confidence": false,
+            "small_sample": false,
+            "hit_rate": 0.6063,
+            "median_roi": 2.65,
+            "avg_roi": 5.72,
+            "median_budget": 60000000.0
+          }
+        }
+      },
+      {
+        "row": {
+          "primary_genre": "Animation"
+        },
+        "values": {
+          "High": {
+            "count": 73,
+            "low_confidence": false,
+            "small_sample": false,
+            "hit_rate": 0.7123,
+            "median_roi": 2.9,
+            "avg_roi": 3.69,
+            "median_budget": 90000000.0
+          },
+          "Low": {
+            "count": 10,
+            "low_confidence": false,
+            "small_sample": true,
+            "hit_rate": 0.5,
+            "median_roi": 2.59,
+            "avg_roi": 39.51,
+            "median_budget": 7500000.0
+          },
+          "Medium": {
+            "count": 16,
+            "low_confidence": false,
+            "small_sample": true,
+            "hit_rate": 0.25,
+            "median_roi": 1.23,
+            "avg_roi": 3.06,
+            "median_budget": 30000000.0
+          },
+          "_Total": {
+            "count": 99,
+            "low_confidence": false,
+            "small_sample": false,
+            "hit_rate": 0.6162,
+            "median_roi": 2.64,
+            "avg_roi": 7.21,
+            "median_budget": 76000000.0
+          }
+        }
+      },
+      {
+        "row": {
+          "primary_genre": "Comedy"
+        },
+        "values": {
+          "High": {
+            "count": 133,
+            "low_confidence": false,
+            "small_sample": false,
+            "hit_rate": 0.609,
+            "median_roi": 2.28,
+            "avg_roi": 2.69,
+            "median_budget": 60000000.0
+          },
+          "Low": {
+            "count": 239,
+            "low_confidence": false,
+            "small_sample": false,
+            "hit_rate": 0.6109,
+            "median_roi": 3.08,
+            "avg_roi": 8.93,
+            "median_budget": 6600000.0
+          },
+          "Medium": {
+            "count": 257,
+            "low_confidence": false,
+            "small_sample": false,
+            "hit_rate": 0.5292,
+            "median_roi": 2.21,
+            "avg_roi": 3.27,
+            "median_budget": 26000000.0
+          },
+          "_Total": {
+            "count": 629,
+            "low_confidence": false,
+            "small_sample": false,
+            "hit_rate": 0.5771,
+            "median_roi": 2.49,
+            "avg_roi": 5.3,
+            "median_budget": 20000000.0
+          }
+        }
+      },
+      {
+        "row": {
+          "primary_genre": "Crime"
+        },
+        "values": {
+          "High": {
+            "count": 39,
+            "low_confidence": false,
+            "small_sample": false,
+            "hit_rate": 0.4615,
+            "median_roi": 1.86,
+            "avg_roi": 2.06,
+            "median_budget": 54000000.0
+          },
+          "Low": {
+            "count": 59,
+            "low_confidence": false,
+            "small_sample": false,
+            "hit_rate": 0.5932,
+            "median_roi": 2.98,
+            "avg_roi": 4.37,
+            "median_budget": 7000000.0
+          },
+          "Medium": {
+            "count": 43,
+            "low_confidence": false,
+            "small_sample": false,
+            "hit_rate": 0.5116,
+            "median_roi": 2.09,
+            "avg_roi": 2.88,
+            "median_budget": 26000000.0
+          },
+          "_Total": {
+            "count": 141,
+            "low_confidence": false,
+            "small_sample": false,
+            "hit_rate": 0.5319,
+            "median_roi": 2.13,
+            "avg_roi": 3.28,
+            "median_budget": 20000000.0
+          }
+        }
+      },
+      {
+        "row": {
+          "primary_genre": "Documentary"
+        },
+        "values": {
+          "High": {
+            "count": 0,
+            "low_confidence": true,
+            "small_sample": true,
+            "hit_rate": 0.0,
+            "median_roi": 0.0,
+            "avg_roi": 0.0,
+            "median_budget": 0.0
+          },
+          "Low": {
+            "count": 27,
+            "low_confidence": false,
+            "small_sample": true,
+            "hit_rate": 0.5926,
+            "median_roi": 2.73,
+            "avg_roi": 24.07,
+            "median_budget": 2053648.0
+          },
+          "Medium": {
+            "count": 2,
+            "low_confidence": true,
+            "small_sample": true,
+            "hit_rate": 0.0,
+            "median_roi": 0.72,
+            "avg_roi": 0.72,
+            "median_budget": 27933198.5
+          },
+          "_Total": {
+            "count": 29,
+            "low_confidence": false,
+            "small_sample": true,
+            "hit_rate": 0.5517,
+            "median_roi": 2.73,
+            "avg_roi": 22.46,
+            "median_budget": 2500000.0
+          }
+        }
+      },
+      {
+        "row": {
+          "primary_genre": "Drama"
+        },
+        "values": {
+          "High": {
+            "count": 145,
+            "low_confidence": false,
+            "small_sample": false,
+            "hit_rate": 0.4414,
+            "median_roi": 1.86,
+            "avg_roi": 2.19,
+            "median_budget": 60000000.0
+          },
+          "Low": {
+            "count": 328,
+            "low_confidence": false,
+            "small_sample": false,
+            "hit_rate": 0.628,
+            "median_roi": 3.02,
+            "avg_roi": 10.58,
+            "median_budget": 6500000.0
+          },
+          "Medium": {
+            "count": 264,
+            "low_confidence": false,
+            "small_sample": false,
+            "hit_rate": 0.4621,
+            "median_roi": 1.71,
+            "avg_roi": 2.74,
+            "median_budget": 25000000.0
+          },
+          "_Total": {
+            "count": 737,
+            "low_confidence": false,
+            "small_sample": false,
+            "hit_rate": 0.5319,
+            "median_roi": 2.16,
+            "avg_roi": 6.12,
+            "median_budget": 18000000.0
+          }
+        }
+      },
+      {
+        "row": {
+          "primary_genre": "Family"
+        },
+        "values": {
+          "High": {
+            "count": 20,
+            "low_confidence": false,
+            "small_sample": true,
+            "hit_rate": 0.6,
+            "median_roi": 2.82,
+            "avg_roi": 4.31,
+            "median_budget": 74500000.0
+          },
+          "Low": {
+            "count": 4,
+            "low_confidence": true,
+            "small_sample": true,
+            "hit_rate": 0.75,
+            "median_roi": 4.69,
+            "avg_roi": 4.8,
+            "median_budget": 4250000.0
+          },
+          "Medium": {
+            "count": 14,
+            "low_confidence": false,
+            "small_sample": true,
+            "hit_rate": 0.4286,
+            "median_roi": 1.71,
+            "avg_roi": 2.57,
+            "median_budget": 23500000.0
+          },
+          "_Total": {
+            "count": 38,
+            "low_confidence": false,
+            "small_sample": false,
+            "hit_rate": 0.5526,
+            "median_roi": 2.82,
+            "avg_roi": 3.72,
+            "median_budget": 47500000.0
+          }
+        }
+      },
+      {
+        "row": {
+          "primary_genre": "Fantasy"
+        },
+        "values": {
+          "High": {
+            "count": 51,
+            "low_confidence": false,
+            "small_sample": false,
+            "hit_rate": 0.5882,
+            "median_roi": 2.23,
+            "avg_roi": 2.57,
+            "median_budget": 80000000.0
+          },
+          "Low": {
+            "count": 16,
+            "low_confidence": false,
+            "small_sample": true,
+            "hit_rate": 0.5,
+            "median_roi": 2.49,
+            "avg_roi": 11.98,
+            "median_budget": 11500000.0
+          },
+          "Medium": {
+            "count": 24,
+            "low_confidence": false,
+            "small_sample": true,
+            "hit_rate": 0.6667,
+            "median_roi": 2.64,
+            "avg_roi": 4.7,
+            "median_budget": 25000000.0
+          },
+          "_Total": {
+            "count": 91,
+            "low_confidence": false,
+            "small_sample": false,
+            "hit_rate": 0.5934,
+            "median_roi": 2.38,
+            "avg_roi": 4.78,
+            "median_budget": 50000000.0
+          }
+        }
+      },
+      {
+        "row": {
+          "primary_genre": "Foreign"
+        },
+        "values": {
+          "High": {
+            "count": 0,
+            "low_confidence": true,
+            "small_sample": true,
+            "hit_rate": 0.0,
+            "median_roi": 0.0,
+            "avg_roi": 0.0,
+            "median_budget": 0.0
+          },
+          "Low": {
+            "count": 1,
+            "low_confidence": true,
+            "small_sample": true,
+            "hit_rate": 0.0,
+            "median_roi": 0.49,
+            "avg_roi": 0.49,
+            "median_budget": 225000.0
+          },
+          "Medium": {
+            "count": 0,
+            "low_confidence": true,
+            "small_sample": true,
+            "hit_rate": 0.0,
+            "median_roi": 0.0,
+            "avg_roi": 0.0,
+            "median_budget": 0.0
+          },
+          "_Total": {
+            "count": 1,
+            "low_confidence": true,
+            "small_sample": true,
+            "hit_rate": 0.0,
+            "median_roi": 0.49,
+            "avg_roi": 0.49,
+            "median_budget": 225000.0
+          }
+        }
+      },
+      {
+        "row": {
+          "primary_genre": "History"
+        },
+        "values": {
+          "High": {
+            "count": 5,
+            "low_confidence": true,
+            "small_sample": true,
+            "hit_rate": 0.8,
+            "median_roi": 2.68,
+            "avg_roi": 2.6,
+            "median_budget": 65000000.0
+          },
+          "Low": {
+            "count": 7,
+            "low_confidence": true,
+            "small_sample": true,
+            "hit_rate": 0.7143,
+            "median_roi": 8.84,
+            "avg_roi": 14.89,
+            "median_budget": 6000000.0
+          },
+          "Medium": {
+            "count": 6,
+            "low_confidence": true,
+            "small_sample": true,
+            "hit_rate": 0.3333,
+            "median_roi": 1.38,
+            "avg_roi": 1.68,
+            "median_budget": 21500000.0
+          },
+          "_Total": {
+            "count": 18,
+            "low_confidence": false,
+            "small_sample": true,
+            "hit_rate": 0.6111,
+            "median_roi": 2.7,
+            "avg_roi": 7.07,
+            "median_budget": 20000000.0
+          }
+        }
+      },
+      {
+        "row": {
+          "primary_genre": "Horror"
+        },
+        "values": {
+          "High": {
+            "count": 14,
+            "low_confidence": false,
+            "small_sample": true,
+            "hit_rate": 0.4286,
+            "median_roi": 1.55,
+            "avg_roi": 1.87,
+            "median_budget": 60000000.0
+          },
+          "Low": {
+            "count": 123,
+            "low_confidence": false,
+            "small_sample": false,
+            "hit_rate": 0.8374,
+            "median_roi": 5.92,
+            "avg_roi": 163.78,
+            "median_budget": 5000000.0
+          },
+          "Medium": {
+            "count": 59,
+            "low_confidence": false,
+            "small_sample": false,
+            "hit_rate": 0.7288,
+            "median_roi": 2.52,
+            "avg_roi": 3.41,
+            "median_budget": 26000000.0
+          },
+          "_Total": {
+            "count": 196,
+            "low_confidence": false,
+            "small_sample": false,
+            "hit_rate": 0.7755,
+            "median_roi": 3.72,
+            "avg_roi": 103.94,
+            "median_budget": 10900000.0
+          }
+        }
+      },
+      {
+        "row": {
+          "primary_genre": "Music"
+        },
+        "values": {
+          "High": {
+            "count": 2,
+            "low_confidence": true,
+            "small_sample": true,
+            "hit_rate": 0.0,
+            "median_roi": 0.37,
+            "avg_roi": 0.37,
+            "median_budget": 57500000.0
+          },
+          "Low": {
+            "count": 9,
+            "low_confidence": true,
+            "small_sample": true,
+            "hit_rate": 0.5556,
+            "median_roi": 2.53,
+            "avg_roi": 5.85,
+            "median_budget": 12000000.0
+          },
+          "Medium": {
+            "count": 9,
+            "low_confidence": true,
+            "small_sample": true,
+            "hit_rate": 0.4444,
+            "median_roi": 1.68,
+            "avg_roi": 2.99,
+            "median_budget": 27000000.0
+          },
+          "_Total": {
+            "count": 20,
+            "low_confidence": false,
+            "small_sample": true,
+            "hit_rate": 0.45,
+            "median_roi": 1.64,
+            "avg_roi": 4.01,
+            "median_budget": 19000000.0
+          }
+        }
+      },
+      {
+        "row": {
+          "primary_genre": "Mystery"
+        },
+        "values": {
+          "High": {
+            "count": 8,
+            "low_confidence": true,
+            "small_sample": true,
+            "hit_rate": 0.625,
+            "median_roi": 2.36,
+            "avg_roi": 2.5,
+            "median_budget": 68000000.0
+          },
+          "Low": {
+            "count": 8,
+            "low_confidence": true,
+            "small_sample": true,
+            "hit_rate": 0.75,
+            "median_roi": 4.37,
+            "avg_roi": 10.79,
+            "median_budget": 9500000.0
+          },
+          "Medium": {
+            "count": 10,
+            "low_confidence": false,
+            "small_sample": true,
+            "hit_rate": 0.4,
+            "median_roi": 1.67,
+            "avg_roi": 3.27,
+            "median_budget": 22500000.0
+          },
+          "_Total": {
+            "count": 26,
+            "low_confidence": false,
+            "small_sample": true,
+            "hit_rate": 0.5769,
+            "median_roi": 2.62,
+            "avg_roi": 5.35,
+            "median_budget": 22500000.0
+          }
+        }
+      },
+      {
+        "row": {
+          "primary_genre": "Romance"
+        },
+        "values": {
+          "High": {
+            "count": 17,
+            "low_confidence": false,
+            "small_sample": true,
+            "hit_rate": 0.4706,
+            "median_roi": 1.95,
+            "avg_roi": 2.73,
+            "median_budget": 60000000.0
+          },
+          "Low": {
+            "count": 23,
+            "low_confidence": false,
+            "small_sample": true,
+            "hit_rate": 0.6087,
+            "median_roi": 2.73,
+            "avg_roi": 7.03,
+            "median_budget": 7000000.0
+          },
+          "Medium": {
+            "count": 29,
+            "low_confidence": false,
+            "small_sample": true,
+            "hit_rate": 0.5172,
+            "median_roi": 2.06,
+            "avg_roi": 3.52,
+            "median_budget": 25000000.0
+          },
+          "_Total": {
+            "count": 69,
+            "low_confidence": false,
+            "small_sample": false,
+            "hit_rate": 0.5362,
+            "median_roi": 2.54,
+            "avg_roi": 4.5,
+            "median_budget": 23000000.0
+          }
+        }
+      },
+      {
+        "row": {
+          "primary_genre": "Science Fiction"
+        },
+        "values": {
+          "High": {
+            "count": 35,
+            "low_confidence": false,
+            "small_sample": false,
+            "hit_rate": 0.5714,
+            "median_roi": 2.55,
+            "avg_roi": 2.99,
+            "median_budget": 105000000.0
+          },
+          "Low": {
+            "count": 18,
+            "low_confidence": false,
+            "small_sample": true,
+            "hit_rate": 0.5,
+            "median_roi": 2.32,
+            "avg_roi": 8.42,
+            "median_budget": 9500000.0
+          },
+          "Medium": {
+            "count": 25,
+            "low_confidence": false,
+            "small_sample": true,
+            "hit_rate": 0.68,
+            "median_roi": 3.17,
+            "avg_roi": 3.73,
+            "median_budget": 27000000.0
+          },
+          "_Total": {
+            "count": 78,
+            "low_confidence": false,
+            "small_sample": false,
+            "hit_rate": 0.5897,
+            "median_roi": 2.76,
+            "avg_roi": 4.48,
+            "median_budget": 35500000.0
+          }
+        }
+      },
+      {
+        "row": {
+          "primary_genre": "Thriller"
+        },
+        "values": {
+          "High": {
+            "count": 40,
+            "low_confidence": false,
+            "small_sample": false,
+            "hit_rate": 0.55,
+            "median_roi": 2.05,
+            "avg_roi": 2.4,
+            "median_budget": 70000000.0
+          },
+          "Low": {
+            "count": 32,
+            "low_confidence": false,
+            "small_sample": false,
+            "hit_rate": 0.5,
+            "median_roi": 1.82,
+            "avg_roi": 7.44,
+            "median_budget": 7000000.0
+          },
+          "Medium": {
+            "count": 44,
+            "low_confidence": false,
+            "small_sample": false,
+            "hit_rate": 0.6136,
+            "median_roi": 2.38,
+            "avg_roi": 2.96,
+            "median_budget": 25000000.0
+          },
+          "_Total": {
+            "count": 116,
+            "low_confidence": false,
+            "small_sample": false,
+            "hit_rate": 0.5603,
+            "median_roi": 2.16,
+            "avg_roi": 4.0,
+            "median_budget": 27000000.0
+          }
+        }
+      },
+      {
+        "row": {
+          "primary_genre": "Unknown"
+        },
+        "values": {
+          "High": {
+            "count": 0,
+            "low_confidence": true,
+            "small_sample": true,
+            "hit_rate": 0.0,
+            "median_roi": 0.0,
+            "avg_roi": 0.0,
+            "median_budget": 0.0
+          },
+          "Low": {
+            "count": 1,
+            "low_confidence": true,
+            "small_sample": true,
+            "hit_rate": 0.0,
+            "median_roi": 0.84,
+            "avg_roi": 0.84,
+            "median_budget": 2000000.0
+          },
+          "Medium": {
+            "count": 0,
+            "low_confidence": true,
+            "small_sample": true,
+            "hit_rate": 0.0,
+            "median_roi": 0.0,
+            "avg_roi": 0.0,
+            "median_budget": 0.0
+          },
+          "_Total": {
+            "count": 1,
+            "low_confidence": true,
+            "small_sample": true,
+            "hit_rate": 0.0,
+            "median_roi": 0.84,
+            "avg_roi": 0.84,
+            "median_budget": 2000000.0
+          }
+        }
+      },
+      {
+        "row": {
+          "primary_genre": "War"
+        },
+        "values": {
+          "High": {
+            "count": 8,
+            "low_confidence": true,
+            "small_sample": true,
+            "hit_rate": 0.375,
+            "median_roi": 1.25,
+            "avg_roi": 2.4,
+            "median_budget": 69000000.0
+          },
+          "Low": {
+            "count": 3,
+            "low_confidence": true,
+            "small_sample": true,
+            "hit_rate": 0.3333,
+            "median_roi": 1.63,
+            "avg_roi": 6.71,
+            "median_budget": 3800000.0
+          },
+          "Medium": {
+            "count": 7,
+            "low_confidence": true,
+            "small_sample": true,
+            "hit_rate": 0.0,
+            "median_roi": 0.69,
+            "avg_roi": 0.72,
+            "median_budget": 22500000.0
+          },
+          "_Total": {
+            "count": 18,
+            "low_confidence": false,
+            "small_sample": true,
+            "hit_rate": 0.2222,
+            "median_roi": 1.01,
+            "avg_roi": 2.47,
+            "median_budget": 35000000.0
+          }
+        }
+      },
+      {
+        "row": {
+          "primary_genre": "Western"
+        },
+        "values": {
+          "High": {
+            "count": 5,
+            "low_confidence": true,
+            "small_sample": true,
+            "hit_rate": 0.2,
+            "median_roi": 1.27,
+            "avg_roi": 1.6,
+            "median_budget": 100000000.0
+          },
+          "Low": {
+            "count": 15,
+            "low_confidence": false,
+            "small_sample": true,
+            "hit_rate": 0.8,
+            "median_roi": 3.38,
+            "avg_roi": 11.43,
+            "median_budget": 3000000.0
+          },
+          "Medium": {
+            "count": 2,
+            "low_confidence": true,
+            "small_sample": true,
+            "hit_rate": 0.5,
+            "median_roi": 1.66,
+            "avg_roi": 1.66,
+            "median_budget": 19000000.0
+          },
+          "_Total": {
+            "count": 22,
+            "low_confidence": false,
+            "small_sample": true,
+            "hit_rate": 0.6364,
+            "median_roi": 2.93,
+            "avg_roi": 8.31,
+            "median_budget": 5250000.0
+          }
+        }
+      }
+    ],
+    "totals": {
+      "High": {
+        "count": 1068,
+        "low_confidence": false,
+        "small_sample": false,
+        "hit_rate": 0.5515,
+        "median_roi": 2.19,
+        "avg_roi": 2.67,
+        "median_budget": 73500000.0
+      },
+      "Low": {
+        "count": 1068,
+        "low_confidence": false,
+        "small_sample": false,
+        "hit_rate": 0.6358,
+        "median_roi": 3.22,
+        "avg_roi": 27.71,
+        "median_budget": 6000000.0
+      },
+      "Medium": {
+        "count": 1068,
+        "low_confidence": false,
+        "small_sample": false,
+        "hit_rate": 0.4991,
+        "median_roi": 1.99,
+        "avg_roi": 3.01,
+        "median_budget": 25515000.0
+      },
+      "_Total": {
+        "count": 3204,
+        "low_confidence": false,
+        "small_sample": false,
+        "hit_rate": 0.5621,
+        "median_roi": 2.31,
+        "avg_roi": 11.13,
+        "median_budget": 25515000.0
+      }
+    }
+  },
+  "rotated_budget_by_genre": {
+    "type": "2D_pivot",
+    "rows": [
+      "budget_tier"
+    ],
+    "cols": [
+      "primary_genre"
+    ],
+    "col_headers": [
+      "Action",
+      "Adventure",
+      "Animation",
+      "Comedy",
+      "Crime",
+      "Documentary",
+      "Drama",
+      "Family",
+      "Fantasy",
+      "Foreign",
+      "History",
+      "Horror",
+      "Music",
+      "Mystery",
+      "Romance",
+      "Science Fiction",
+      "Thriller",
+      "Unknown",
+      "War",
+      "Western",
+      "_Total"
+    ],
+    "measures": [
+      "count",
+      "hit_rate",
+      "median_roi",
+      "avg_roi",
+      "median_budget"
+    ],
+    "filters": {},
+    "total_movies": 3204,
+    "matrix": [
+      {
+        "row": {
+          "budget_tier": "High"
+        },
+        "values": {
+          "Action": {
+            "count": 302,
+            "low_confidence": false,
+            "small_sample": false,
+            "hit_rate": 0.5298,
+            "median_roi": 2.1,
+            "avg_roi": 2.46,
+            "median_budget": 75000000.0
+          },
+          "Adventure": {
+            "count": 171,
+            "low_confidence": false,
+            "small_sample": false,
+            "hit_rate": 0.6023,
+            "median_roi": 2.39,
+            "avg_roi": 3.11,
+            "median_budget": 100000000.0
+          },
+          "Animation": {
+            "count": 73,
+            "low_confidence": false,
+            "small_sample": false,
+            "hit_rate": 0.7123,
+            "median_roi": 2.9,
+            "avg_roi": 3.69,
+            "median_budget": 90000000.0
+          },
+          "Comedy": {
+            "count": 133,
+            "low_confidence": false,
+            "small_sample": false,
+            "hit_rate": 0.609,
+            "median_roi": 2.28,
+            "avg_roi": 2.69,
+            "median_budget": 60000000.0
+          },
+          "Crime": {
+            "count": 39,
+            "low_confidence": false,
+            "small_sample": false,
+            "hit_rate": 0.4615,
+            "median_roi": 1.86,
+            "avg_roi": 2.06,
+            "median_budget": 54000000.0
+          },
+          "Documentary": {
+            "count": 0,
+            "low_confidence": true,
+            "small_sample": true,
+            "hit_rate": 0.0,
+            "median_roi": 0.0,
+            "avg_roi": 0.0,
+            "median_budget": 0.0
+          },
+          "Drama": {
+            "count": 145,
+            "low_confidence": false,
+            "small_sample": false,
+            "hit_rate": 0.4414,
+            "median_roi": 1.86,
+            "avg_roi": 2.19,
+            "median_budget": 60000000.0
+          },
+          "Family": {
+            "count": 20,
+            "low_confidence": false,
+            "small_sample": true,
+            "hit_rate": 0.6,
+            "median_roi": 2.82,
+            "avg_roi": 4.31,
+            "median_budget": 74500000.0
+          },
+          "Fantasy": {
+            "count": 51,
+            "low_confidence": false,
+            "small_sample": false,
+            "hit_rate": 0.5882,
+            "median_roi": 2.23,
+            "avg_roi": 2.57,
+            "median_budget": 80000000.0
+          },
+          "Foreign": {
+            "count": 0,
+            "low_confidence": true,
+            "small_sample": true,
+            "hit_rate": 0.0,
+            "median_roi": 0.0,
+            "avg_roi": 0.0,
+            "median_budget": 0.0
+          },
+          "History": {
+            "count": 5,
+            "low_confidence": true,
+            "small_sample": true,
+            "hit_rate": 0.8,
+            "median_roi": 2.68,
+            "avg_roi": 2.6,
+            "median_budget": 65000000.0
+          },
+          "Horror": {
+            "count": 14,
+            "low_confidence": false,
+            "small_sample": true,
+            "hit_rate": 0.4286,
+            "median_roi": 1.55,
+            "avg_roi": 1.87,
+            "median_budget": 60000000.0
+          },
+          "Music": {
+            "count": 2,
+            "low_confidence": true,
+            "small_sample": true,
+            "hit_rate": 0.0,
+            "median_roi": 0.37,
+            "avg_roi": 0.37,
+            "median_budget": 57500000.0
+          },
+          "Mystery": {
+            "count": 8,
+            "low_confidence": true,
+            "small_sample": true,
+            "hit_rate": 0.625,
+            "median_roi": 2.36,
+            "avg_roi": 2.5,
+            "median_budget": 68000000.0
+          },
+          "Romance": {
+            "count": 17,
+            "low_confidence": false,
+            "small_sample": true,
+            "hit_rate": 0.4706,
+            "median_roi": 1.95,
+            "avg_roi": 2.73,
+            "median_budget": 60000000.0
+          },
+          "Science Fiction": {
+            "count": 35,
+            "low_confidence": false,
+            "small_sample": false,
+            "hit_rate": 0.5714,
+            "median_roi": 2.55,
+            "avg_roi": 2.99,
+            "median_budget": 105000000.0
+          },
+          "Thriller": {
+            "count": 40,
+            "low_confidence": false,
+            "small_sample": false,
+            "hit_rate": 0.55,
+            "median_roi": 2.05,
+            "avg_roi": 2.4,
+            "median_budget": 70000000.0
+          },
+          "Unknown": {
+            "count": 0,
+            "low_confidence": true,
+            "small_sample": true,
+            "hit_rate": 0.0,
+            "median_roi": 0.0,
+            "avg_roi": 0.0,
+            "median_budget": 0.0
+          },
+          "War": {
+            "count": 8,
+            "low_confidence": true,
+            "small_sample": true,
+            "hit_rate": 0.375,
+            "median_roi": 1.25,
+            "avg_roi": 2.4,
+            "median_budget": 69000000.0
+          },
+          "Western": {
+            "count": 5,
+            "low_confidence": true,
+            "small_sample": true,
+            "hit_rate": 0.2,
+            "median_roi": 1.27,
+            "avg_roi": 1.6,
+            "median_budget": 100000000.0
+          },
+          "_Total": {
+            "count": 1068,
+            "low_confidence": false,
+            "small_sample": false,
+            "hit_rate": 0.5515,
+            "median_roi": 2.19,
+            "avg_roi": 2.67,
+            "median_budget": 73500000.0
+          }
+        }
+      },
+      {
+        "row": {
+          "budget_tier": "Low"
+        },
+        "values": {
+          "Action": {
+            "count": 104,
+            "low_confidence": false,
+            "small_sample": false,
+            "hit_rate": 0.5577,
+            "median_roi": 2.21,
+            "avg_roi": 5.33,
+            "median_budget": 6450000.0
+          },
+          "Adventure": {
+            "count": 41,
+            "low_confidence": false,
+            "small_sample": false,
+            "hit_rate": 0.7561,
+            "median_roi": 5.64,
+            "avg_roi": 19.16,
+            "median_budget": 6500000.0
+          },
+          "Animation": {
+            "count": 10,
+            "low_confidence": false,
+            "small_sample": true,
+            "hit_rate": 0.5,
+            "median_roi": 2.59,
+            "avg_roi": 39.51,
+            "median_budget": 7500000.0
+          },
+          "Comedy": {
+            "count": 239,
+            "low_confidence": false,
+            "small_sample": false,
+            "hit_rate": 0.6109,
+            "median_roi": 3.08,
+            "avg_roi": 8.93,
+            "median_budget": 6600000.0
+          },
+          "Crime": {
+            "count": 59,
+            "low_confidence": false,
+            "small_sample": false,
+            "hit_rate": 0.5932,
+            "median_roi": 2.98,
+            "avg_roi": 4.37,
+            "median_budget": 7000000.0
+          },
+          "Documentary": {
+            "count": 27,
+            "low_confidence": false,
+            "small_sample": true,
+            "hit_rate": 0.5926,
+            "median_roi": 2.73,
+            "avg_roi": 24.07,
+            "median_budget": 2053648.0
+          },
+          "Drama": {
+            "count": 328,
+            "low_confidence": false,
+            "small_sample": false,
+            "hit_rate": 0.628,
+            "median_roi": 3.02,
+            "avg_roi": 10.58,
+            "median_budget": 6500000.0
+          },
+          "Family": {
+            "count": 4,
+            "low_confidence": true,
+            "small_sample": true,
+            "hit_rate": 0.75,
+            "median_roi": 4.69,
+            "avg_roi": 4.8,
+            "median_budget": 4250000.0
+          },
+          "Fantasy": {
+            "count": 16,
+            "low_confidence": false,
+            "small_sample": true,
+            "hit_rate": 0.5,
+            "median_roi": 2.49,
+            "avg_roi": 11.98,
+            "median_budget": 11500000.0
+          },
+          "Foreign": {
+            "count": 1,
+            "low_confidence": true,
+            "small_sample": true,
+            "hit_rate": 0.0,
+            "median_roi": 0.49,
+            "avg_roi": 0.49,
+            "median_budget": 225000.0
+          },
+          "History": {
+            "count": 7,
+            "low_confidence": true,
+            "small_sample": true,
+            "hit_rate": 0.7143,
+            "median_roi": 8.84,
+            "avg_roi": 14.89,
+            "median_budget": 6000000.0
+          },
+          "Horror": {
+            "count": 123,
+            "low_confidence": false,
+            "small_sample": false,
+            "hit_rate": 0.8374,
+            "median_roi": 5.92,
+            "avg_roi": 163.78,
+            "median_budget": 5000000.0
+          },
+          "Music": {
+            "count": 9,
+            "low_confidence": true,
+            "small_sample": true,
+            "hit_rate": 0.5556,
+            "median_roi": 2.53,
+            "avg_roi": 5.85,
+            "median_budget": 12000000.0
+          },
+          "Mystery": {
+            "count": 8,
+            "low_confidence": true,
+            "small_sample": true,
+            "hit_rate": 0.75,
+            "median_roi": 4.37,
+            "avg_roi": 10.79,
+            "median_budget": 9500000.0
+          },
+          "Romance": {
+            "count": 23,
+            "low_confidence": false,
+            "small_sample": true,
+            "hit_rate": 0.6087,
+            "median_roi": 2.73,
+            "avg_roi": 7.03,
+            "median_budget": 7000000.0
+          },
+          "Science Fiction": {
+            "count": 18,
+            "low_confidence": false,
+            "small_sample": true,
+            "hit_rate": 0.5,
+            "median_roi": 2.32,
+            "avg_roi": 8.42,
+            "median_budget": 9500000.0
+          },
+          "Thriller": {
+            "count": 32,
+            "low_confidence": false,
+            "small_sample": false,
+            "hit_rate": 0.5,
+            "median_roi": 1.82,
+            "avg_roi": 7.44,
+            "median_budget": 7000000.0
+          },
+          "Unknown": {
+            "count": 1,
+            "low_confidence": true,
+            "small_sample": true,
+            "hit_rate": 0.0,
+            "median_roi": 0.84,
+            "avg_roi": 0.84,
+            "median_budget": 2000000.0
+          },
+          "War": {
+            "count": 3,
+            "low_confidence": true,
+            "small_sample": true,
+            "hit_rate": 0.3333,
+            "median_roi": 1.63,
+            "avg_roi": 6.71,
+            "median_budget": 3800000.0
+          },
+          "Western": {
+            "count": 15,
+            "low_confidence": false,
+            "small_sample": true,
+            "hit_rate": 0.8,
+            "median_roi": 3.38,
+            "avg_roi": 11.43,
+            "median_budget": 3000000.0
+          },
+          "_Total": {
+            "count": 1068,
+            "low_confidence": false,
+            "small_sample": false,
+            "hit_rate": 0.6358,
+            "median_roi": 3.22,
+            "avg_roi": 27.71,
+            "median_budget": 6000000.0
+          }
+        }
+      },
+      {
+        "row": {
+          "budget_tier": "Medium"
+        },
+        "values": {
+          "Action": {
+            "count": 182,
+            "low_confidence": false,
+            "small_sample": false,
+            "hit_rate": 0.4066,
+            "median_roi": 1.55,
+            "avg_roi": 2.17,
+            "median_budget": 28000000.0
+          },
+          "Adventure": {
+            "count": 75,
+            "low_confidence": false,
+            "small_sample": false,
+            "hit_rate": 0.5333,
+            "median_roi": 2.2,
+            "avg_roi": 4.32,
+            "median_budget": 27000000.0
+          },
+          "Animation": {
+            "count": 16,
+            "low_confidence": false,
+            "small_sample": true,
+            "hit_rate": 0.25,
+            "median_roi": 1.23,
+            "avg_roi": 3.06,
+            "median_budget": 30000000.0
+          },
+          "Comedy": {
+            "count": 257,
+            "low_confidence": false,
+            "small_sample": false,
+            "hit_rate": 0.5292,
+            "median_roi": 2.21,
+            "avg_roi": 3.27,
+            "median_budget": 26000000.0
+          },
+          "Crime": {
+            "count": 43,
+            "low_confidence": false,
+            "small_sample": false,
+            "hit_rate": 0.5116,
+            "median_roi": 2.09,
+            "avg_roi": 2.88,
+            "median_budget": 26000000.0
+          },
+          "Documentary": {
+            "count": 2,
+            "low_confidence": true,
+            "small_sample": true,
+            "hit_rate": 0.0,
+            "median_roi": 0.72,
+            "avg_roi": 0.72,
+            "median_budget": 27933198.5
+          },
+          "Drama": {
+            "count": 264,
+            "low_confidence": false,
+            "small_sample": false,
+            "hit_rate": 0.4621,
+            "median_roi": 1.71,
+            "avg_roi": 2.74,
+            "median_budget": 25000000.0
+          },
+          "Family": {
+            "count": 14,
+            "low_confidence": false,
+            "small_sample": true,
+            "hit_rate": 0.4286,
+            "median_roi": 1.71,
+            "avg_roi": 2.57,
+            "median_budget": 23500000.0
+          },
+          "Fantasy": {
+            "count": 24,
+            "low_confidence": false,
+            "small_sample": true,
+            "hit_rate": 0.6667,
+            "median_roi": 2.64,
+            "avg_roi": 4.7,
+            "median_budget": 25000000.0
+          },
+          "Foreign": {
+            "count": 0,
+            "low_confidence": true,
+            "small_sample": true,
+            "hit_rate": 0.0,
+            "median_roi": 0.0,
+            "avg_roi": 0.0,
+            "median_budget": 0.0
+          },
+          "History": {
+            "count": 6,
+            "low_confidence": true,
+            "small_sample": true,
+            "hit_rate": 0.3333,
+            "median_roi": 1.38,
+            "avg_roi": 1.68,
+            "median_budget": 21500000.0
+          },
+          "Horror": {
+            "count": 59,
+            "low_confidence": false,
+            "small_sample": false,
+            "hit_rate": 0.7288,
+            "median_roi": 2.52,
+            "avg_roi": 3.41,
+            "median_budget": 26000000.0
+          },
+          "Music": {
+            "count": 9,
+            "low_confidence": true,
+            "small_sample": true,
+            "hit_rate": 0.4444,
+            "median_roi": 1.68,
+            "avg_roi": 2.99,
+            "median_budget": 27000000.0
+          },
+          "Mystery": {
+            "count": 10,
+            "low_confidence": false,
+            "small_sample": true,
+            "hit_rate": 0.4,
+            "median_roi": 1.67,
+            "avg_roi": 3.27,
+            "median_budget": 22500000.0
+          },
+          "Romance": {
+            "count": 29,
+            "low_confidence": false,
+            "small_sample": true,
+            "hit_rate": 0.5172,
+            "median_roi": 2.06,
+            "avg_roi": 3.52,
+            "median_budget": 25000000.0
+          },
+          "Science Fiction": {
+            "count": 25,
+            "low_confidence": false,
+            "small_sample": true,
+            "hit_rate": 0.68,
+            "median_roi": 3.17,
+            "avg_roi": 3.73,
+            "median_budget": 27000000.0
+          },
+          "Thriller": {
+            "count": 44,
+            "low_confidence": false,
+            "small_sample": false,
+            "hit_rate": 0.6136,
+            "median_roi": 2.38,
+            "avg_roi": 2.96,
+            "median_budget": 25000000.0
+          },
+          "Unknown": {
+            "count": 0,
+            "low_confidence": true,
+            "small_sample": true,
+            "hit_rate": 0.0,
+            "median_roi": 0.0,
+            "avg_roi": 0.0,
+            "median_budget": 0.0
+          },
+          "War": {
+            "count": 7,
+            "low_confidence": true,
+            "small_sample": true,
+            "hit_rate": 0.0,
+            "median_roi": 0.69,
+            "avg_roi": 0.72,
+            "median_budget": 22500000.0
+          },
+          "Western": {
+            "count": 2,
+            "low_confidence": true,
+            "small_sample": true,
+            "hit_rate": 0.5,
+            "median_roi": 1.66,
+            "avg_roi": 1.66,
+            "median_budget": 19000000.0
+          },
+          "_Total": {
+            "count": 1068,
+            "low_confidence": false,
+            "small_sample": false,
+            "hit_rate": 0.4991,
+            "median_roi": 1.99,
+            "avg_roi": 3.01,
+            "median_budget": 25515000.0
+          }
+        }
+      }
+    ],
+    "totals": {
+      "Action": {
+        "count": 588,
+        "low_confidence": false,
+        "small_sample": false,
+        "hit_rate": 0.4966,
+        "median_roi": 1.98,
+        "avg_roi": 2.88,
+        "median_budget": 44000000.0
+      },
+      "Adventure": {
+        "count": 287,
+        "low_confidence": false,
+        "small_sample": false,
+        "hit_rate": 0.6063,
+        "median_roi": 2.65,
+        "avg_roi": 5.72,
+        "median_budget": 60000000.0
+      },
+      "Animation": {
+        "count": 99,
+        "low_confidence": false,
+        "small_sample": false,
+        "hit_rate": 0.6162,
+        "median_roi": 2.64,
+        "avg_roi": 7.21,
+        "median_budget": 76000000.0
+      },
+      "Comedy": {
+        "count": 629,
+        "low_confidence": false,
+        "small_sample": false,
+        "hit_rate": 0.5771,
+        "median_roi": 2.49,
+        "avg_roi": 5.3,
+        "median_budget": 20000000.0
+      },
+      "Crime": {
+        "count": 141,
+        "low_confidence": false,
+        "small_sample": false,
+        "hit_rate": 0.5319,
+        "median_roi": 2.13,
+        "avg_roi": 3.28,
+        "median_budget": 20000000.0
+      },
+      "Documentary": {
+        "count": 29,
+        "low_confidence": false,
+        "small_sample": true,
+        "hit_rate": 0.5517,
+        "median_roi": 2.73,
+        "avg_roi": 22.46,
+        "median_budget": 2500000.0
+      },
+      "Drama": {
+        "count": 737,
+        "low_confidence": false,
+        "small_sample": false,
+        "hit_rate": 0.5319,
+        "median_roi": 2.16,
+        "avg_roi": 6.12,
+        "median_budget": 18000000.0
+      },
+      "Family": {
+        "count": 38,
+        "low_confidence": false,
+        "small_sample": false,
+        "hit_rate": 0.5526,
+        "median_roi": 2.82,
+        "avg_roi": 3.72,
+        "median_budget": 47500000.0
+      },
+      "Fantasy": {
+        "count": 91,
+        "low_confidence": false,
+        "small_sample": false,
+        "hit_rate": 0.5934,
+        "median_roi": 2.38,
+        "avg_roi": 4.78,
+        "median_budget": 50000000.0
+      },
+      "Foreign": {
+        "count": 1,
+        "low_confidence": true,
+        "small_sample": true,
+        "hit_rate": 0.0,
+        "median_roi": 0.49,
+        "avg_roi": 0.49,
+        "median_budget": 225000.0
+      },
+      "History": {
+        "count": 18,
+        "low_confidence": false,
+        "small_sample": true,
+        "hit_rate": 0.6111,
+        "median_roi": 2.7,
+        "avg_roi": 7.07,
+        "median_budget": 20000000.0
+      },
+      "Horror": {
+        "count": 196,
+        "low_confidence": false,
+        "small_sample": false,
+        "hit_rate": 0.7755,
+        "median_roi": 3.72,
+        "avg_roi": 103.94,
+        "median_budget": 10900000.0
+      },
+      "Music": {
+        "count": 20,
+        "low_confidence": false,
+        "small_sample": true,
+        "hit_rate": 0.45,
+        "median_roi": 1.64,
+        "avg_roi": 4.01,
+        "median_budget": 19000000.0
+      },
+      "Mystery": {
+        "count": 26,
+        "low_confidence": false,
+        "small_sample": true,
+        "hit_rate": 0.5769,
+        "median_roi": 2.62,
+        "avg_roi": 5.35,
+        "median_budget": 22500000.0
+      },
+      "Romance": {
+        "count": 69,
+        "low_confidence": false,
+        "small_sample": false,
+        "hit_rate": 0.5362,
+        "median_roi": 2.54,
+        "avg_roi": 4.5,
+        "median_budget": 23000000.0
+      },
+      "Science Fiction": {
+        "count": 78,
+        "low_confidence": false,
+        "small_sample": false,
+        "hit_rate": 0.5897,
+        "median_roi": 2.76,
+        "avg_roi": 4.48,
+        "median_budget": 35500000.0
+      },
+      "Thriller": {
+        "count": 116,
+        "low_confidence": false,
+        "small_sample": false,
+        "hit_rate": 0.5603,
+        "median_roi": 2.16,
+        "avg_roi": 4.0,
+        "median_budget": 27000000.0
+      },
+      "Unknown": {
+        "count": 1,
+        "low_confidence": true,
+        "small_sample": true,
+        "hit_rate": 0.0,
+        "median_roi": 0.84,
+        "avg_roi": 0.84,
+        "median_budget": 2000000.0
+      },
+      "War": {
+        "count": 18,
+        "low_confidence": false,
+        "small_sample": true,
+        "hit_rate": 0.2222,
+        "median_roi": 1.01,
+        "avg_roi": 2.47,
+        "median_budget": 35000000.0
+      },
+      "Western": {
+        "count": 22,
+        "low_confidence": false,
+        "small_sample": true,
+        "hit_rate": 0.6364,
+        "median_roi": 2.93,
+        "avg_roi": 8.31,
+        "median_budget": 5250000.0
+      },
+      "_Total": {
+        "count": 3204,
+        "low_confidence": false,
+        "small_sample": false,
+        "hit_rate": 0.5621,
+        "median_roi": 2.31,
+        "avg_roi": 11.13,
+        "median_budget": 25515000.0
+      }
+    }
+  }
+}

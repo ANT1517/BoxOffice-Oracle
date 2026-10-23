@@ -1,0 +1,135 @@
+{
+  "total_languages": 26,
+  "languages": [
+    {
+      "code": "en",
+      "count": 3079,
+      "is_english": true
+    },
+    {
+      "code": "fr",
+      "count": 25,
+      "is_english": false
+    },
+    {
+      "code": "es",
+      "count": 15,
+      "is_english": false
+    },
+    {
+      "code": "ja",
+      "count": 13,
+      "is_english": false
+    },
+    {
+      "code": "zh",
+      "count": 13,
+      "is_english": false
+    },
+    {
+      "code": "de",
+      "count": 9,
+      "is_english": false
+    },
+    {
+      "code": "hi",
+      "count": 7,
+      "is_english": false
+    },
+    {
+      "code": "ru",
+      "count": 6,
+      "is_english": false
+    },
+    {
+      "code": "it",
+      "count": 5,
+      "is_english": false
+    },
+    {
+      "code": "cn",
+      "count": 5,
+      "is_english": false
+    },
+    {
+      "code": "ko",
+      "count": 5,
+      "is_english": false
+    },
+    {
+      "code": "da",
+      "count": 4,
+      "is_english": false
+    },
+    {
+      "code": "pt",
+      "count": 2,
+      "is_english": false
+    },
+    {
+      "code": "th",
+      "count": 2,
+      "is_english": false
+    },
+    {
+      "code": "nl",
+      "count": 2,
+      "is_english": false
+    },
+    {
+      "code": "id",
+      "count": 2,
+      "is_english": false
+    },
+    {
+      "code": "xx",
+      "count": 1,
+      "is_english": false
+    },
+    {
+      "code": "fa",
+      "count": 1,
+      "is_english": false
+    },
+    {
+      "code": "af",
+      "count": 1,
+      "is_english": false
+    },
+    {
+      "code": "vi",
+      "count": 1,
+      "is_english": false
+    },
+    {
+      "code": "ro",
+      "count": 1,
+      "is_english": false
+    },
+    {
+      "code": "he",
+      "count": 1,
+      "is_english": false
+    },
+    {
+      "code": "no",
+      "count": 1,
+      "is_english": false
+    },
+    {
+      "code": "nb",
+      "count": 1,
+      "is_english": false
+    },
+    {
+      "code": "pl",
+      "count": 1,
+      "is_english": false
+    },
+    {
+      "code": "te",
+      "count": 1,
+      "is_english": false
+    }
+  ]
+}
